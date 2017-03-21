@@ -132,6 +132,10 @@ map <silent> <F5> :Lexplore<CR>
 " Taskbar
 nmap <F2> :TagbarToggle<CR>
 
+" Ctrl+C/Ctrl+V to copy/paste
+map <C-c> "+y
+map <C-v> "+p
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
