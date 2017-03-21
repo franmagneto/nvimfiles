@@ -90,8 +90,8 @@ if executable('ag')
 endif
 
 " Create session per directory (http://vim.wikia.com/wiki/Go_away_and_come_back)
-let b:sessiondir = $HOME . "/.local/share/nvim/sessions" . getcwd()
 function! MakeSession()
+  let b:sessiondir = $HOME . "/.local/share/nvim/sessions" . getcwd()
   if (filewritable(b:sessiondir) != 2)
     exe 'silent !mkdir -p ' b:sessiondir
     redraw!
@@ -101,6 +101,7 @@ function! MakeSession()
 endfunction
 
 function! LoadSession()
+  let b:sessiondir = $HOME . "/.local/share/nvim/sessions" . getcwd()
   let b:sessionfile = b:sessiondir . "/session.vim"
   if (filereadable(b:sessionfile))
     exe 'source ' b:sessionfile
