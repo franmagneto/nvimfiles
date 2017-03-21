@@ -41,6 +41,8 @@ set cul
 set number
 " Ignore case when predicting commands and searching
 set ic
+" Não cria arquivos .swp
+set noswapfile
 
 " Theme
 set termguicolors
