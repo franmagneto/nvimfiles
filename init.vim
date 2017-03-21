@@ -134,7 +134,7 @@ nmap <F2> :TagbarToggle<CR>
 
 " Ctrl+C/Ctrl+V to copy/paste
 vmap <C-c> "+y
-imap <C-v> <esc>"+pi<bs>
+imap <C-v> <esc>"+pi
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
