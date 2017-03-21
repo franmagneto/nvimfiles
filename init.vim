@@ -133,8 +133,8 @@ map <silent> <F5> :Lexplore<CR>
 nmap <F2> :TagbarToggle<CR>
 
 " Ctrl+C/Ctrl+V to copy/paste
-map <C-c> "+y
-map <C-v> "+p
+vmap <C-c> "+y
+imap <C-v> <esc>"+pi<bs>
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
