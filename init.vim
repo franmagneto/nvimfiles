@@ -11,7 +11,6 @@ call plug#begin()
 Plug 'nanotech/jellybeans.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTree'] }
 Plug 'neomake/neomake'
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -121,12 +120,14 @@ nmap <F8> :Neomake! "make -j$(nproc)"<CR>
 " Run "make clean" on current directory
 nmap <F7> :Neomake! "make clean"<CR>
 
-" NERDTree
-let NERDTreeQuitOnOpen=1
-let NERDTreeMinimalUI=1
-let NERDTreeRespectWildIgnore=1
-map <C-f> :NERDTreeToggle<CR>
-map <F5> :NERDTreeToggle<CR>
+" Config netrw to be similar to NERDTree
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+" Toggle netrw on left split
+map <silent> <F5> :Lexplore<CR>
 
 " Taskbar
 nmap <F2> :TagbarToggle<CR>
