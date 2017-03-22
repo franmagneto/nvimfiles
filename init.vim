@@ -162,4 +162,5 @@ set cul
 set number
 set ic
 set noswapfile
+set linebreak
 let g:tex_flavor = "latex"
