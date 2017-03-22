@@ -8,7 +8,7 @@ endif
 " Load plugins
 call plug#begin()
 
-Plug 'nanotech/jellybeans.vim'
+Plug 'tomasr/molokai'
 Plug 'farmergreg/vim-lastplace'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'neomake/neomake'
@@ -46,7 +46,7 @@ set noswapfile
 
 " Theme
 set termguicolors
-colo jellybeans
+colorscheme molokai
 set background=dark
 
 " Highlight the 80th column
