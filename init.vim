@@ -8,51 +8,41 @@ endif
 " Load plugins
 call plug#begin()
 
-Plug 'tomasr/molokai'
-Plug 'farmergreg/vim-lastplace'
+" Autocomplete and snippets
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'
+
+" Status line and tabs
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+
+" Utilities
+Plug 'farmergreg/vim-lastplace' " Restore cursor position
 Plug 'neomake/neomake'
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
+Plug 'tomtom/tcomment_vim'
+Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-github-dashboard'
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
+
+" Git
 Plug 'airblade/vim-gitgutter'
 Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
+
+" Syntax
 Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'tomtom/tcomment_vim'
 Plug 'nacitar/a.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/vinarise.vim'
-
-call plug#end()
-
-" Hidden buffers (to change from unsaved file and keep it open)
-set hidden
-" Show current line
-set cul
-" Show line numbers
-set number
-" Ignore case when predicting commands and searching
-set ic
-" Não cria arquivos .swp
-set noswapfile
 
 " Theme
-set termguicolors
-colorscheme molokai
-set background=dark
+Plug 'tomasr/molokai'
 
-" Highlight the 80th column
-set tw=79
-set colorcolumn=+1
-set wrap linebreak nolist
+call plug#end()
 
 " Deoplete + Neosnippet
 let g:deoplete#enable_at_startup = 1 
@@ -70,15 +60,14 @@ if has('conceal')
 endif
 
 " Syntastic 
-nmap <leader>e :Errors<CR>
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 0
 
-" Ctrlp
+" CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
-" The Silver Searcher
+" Use ag (The Silver Searcher) with CtrlP
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -119,28 +108,12 @@ endfunction
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call MakeSession()
 
-" Run current file on terminal
-nmap <F9> :terminal ./%<CR>
-" Run "make" on current directory using "number of cores" jobs
-nmap <F8> :Neomake! "make -j$(nproc)"<CR>
-" Run "make clean" on current directory
-nmap <F7> :Neomake! "make clean"<CR>
-
 " Config netrw to be similar to NERDTree
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
-" Toggle netrw on left split
-map <silent> <F5> :Lexplore<CR>
-
-" Taskbar
-nmap <F2> :TagbarToggle<CR>
-
-" Ctrl+C/Ctrl+V to copy/paste
-vmap <C-c> "+y
-imap <C-v> <esc>"+pi
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -148,15 +121,45 @@ let g:airline_powerline_fonts = 1
 " Only filename on tabs, no path
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Set indent to 2 spaces, not expanded, but let plugins to override it
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-filetype plugin indent on
+" Mappings
 
+" Toggle netrw on left split
+map <silent> <F5> :Lexplore<CR>
+" Tagbar
+nmap <F2> :TagbarToggle<CR>
+" Ctrl+C/Ctrl+V to copy/paste
+vmap <C-c> "+y
+imap <C-v> <esc>"+pi
+" Run current file on terminal
+nmap <F9> :terminal ./%<CR>
+" Run "make" and "make clean" on current directory
+nmap <F8> :Neomake! "make -j$(nproc)"<CR>
+nmap <F7> :Neomake! "make clean"<CR>
+" Syntastic
+nmap <leader>e :Errors<CR>
 " Create tab with new buffer
 nnoremap tt  :tabnew<CR>
-
 " Buffer Next and Previous
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
 
+" Theme
+set termguicolors
+colorscheme molokai
+set background=dark
+
+" Highlight the 80th column
+set tw=79
+set colorcolumn=+1
+
+" Set indent to 2 spaces, not expanded, but let plugins to override it
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+filetype plugin indent on
+
+" Misc
+set hidden
+set cul
+set number
+set ic
+set noswapfile
 let g:tex_flavor = "latex"
