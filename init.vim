@@ -34,7 +34,7 @@ Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 
 " Appearance
-Plug 'tomasr/molokai'
+Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
@@ -150,8 +150,7 @@ nmap <leader>r :10split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
 
 " Theme
 set termguicolors
-colorscheme molokai
-set background=dark
+colorscheme onedark
 
 " Highlight the 80th column
 set tw=79
