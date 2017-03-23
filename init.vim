@@ -169,5 +169,5 @@ set number
 set ic
 set noswapfile
 set linebreak
-set nowrap
+set nolist
 let g:tex_flavor = "latex"
