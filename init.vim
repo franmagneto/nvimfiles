@@ -148,6 +148,8 @@ nnoremap tt  :tabnew<CR>
 " Buffer Next and Previous
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
+" Open terminal on split
+nmap <leader>t :10split \| terminal<CR>
 
 " Theme
 set termguicolors
@@ -170,4 +172,5 @@ set ic
 set noswapfile
 set linebreak
 set nolist
+set splitbelow
 let g:tex_flavor = "latex"
