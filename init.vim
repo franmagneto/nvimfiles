@@ -35,7 +35,7 @@ Plug 'kchmck/vim-coffee-script'
 
 " Appearance
 Plug 'joshdick/onedark.vim'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
