@@ -8,24 +8,21 @@ endif
 " Load plugins
 call plug#begin()
 
-" Autocomplete and snippets
+" IDE
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'
-
-" Status line and tabs
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-syntastic/syntastic'
+Plug 'neomake/neomake'
+Plug 'majutsushi/tagbar'
+Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
 " Utilities
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
-Plug 'neomake/neomake'
-Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'majutsushi/tagbar'
 Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
-Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -36,8 +33,9 @@ Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 
-" Theme
+" Appearance
 Plug 'tomasr/molokai'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
