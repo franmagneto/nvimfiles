@@ -23,21 +23,18 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vinarise.vim' " HEX editor
-Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/vim-github-dashboard'
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
+Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
 " Git
 Plug 'airblade/vim-gitgutter'
-Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
 
 " Syntax
 Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'nacitar/a.vim'
 
 " Theme
 Plug 'tomasr/molokai'
