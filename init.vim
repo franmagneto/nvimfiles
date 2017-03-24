@@ -108,7 +108,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
-let g:netrw_winsize = 20
+let g:netrw_winsize = -25
 let g:netrw_list_hide = '^\.git/,^\.hg/,^\.svn/,^\.bundle/'
 
 " Close nvim if netrw is the last buffer
@@ -125,6 +125,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " Only filename on tabs, no path
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Tagbar
+let g:tagbar_compact = 1
+let g:tagbar_width = 30
 
 " Mappings
 
