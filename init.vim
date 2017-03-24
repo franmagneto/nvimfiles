@@ -114,7 +114,9 @@ let g:netrw_list_hide = '^\.git/,^\.hg/,^\.svn/,^\.bundle/'
 " Close nvim if netrw is the last buffer
 augroup netrw_close
   autocmd!
-  autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" | q | endif
+  autocmd WinEnter * if winnr('$') == 1
+        \ && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"
+        \ | call MakeSession() | q | endif
 augroup END
 
 " Open netrw on start
