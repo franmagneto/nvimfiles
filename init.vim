@@ -116,6 +116,9 @@ augroup netrw_close
   autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" | q | endif
 augroup END
 
+" Open netrw on start
+autocmd VimEnter * Lexplore | wincmd p
+
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
