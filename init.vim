@@ -109,6 +109,7 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
+let g:netrw_list_hide = '^\.git/,^\.hg/,^\.svn/,^\.bundle/'
 
 " Close nvim if netrw is the last buffer
 augroup netrw_close
