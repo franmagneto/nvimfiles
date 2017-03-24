@@ -153,10 +153,6 @@ nnoremap tt  :tabnew<CR>
 " Buffer Next and Previous
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
-" Open terminal on split
-nmap <leader>t :8split \| terminal<CR>
-" Start rails server on split terminal
-nmap <leader>r :8split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
 
 " Theme
 set termguicolors
