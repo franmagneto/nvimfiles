@@ -23,6 +23,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
+Plug 'rbgrouleff/bclose.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -134,6 +135,8 @@ let g:tagbar_width = 30
 
 " Mappings
 
+" Close buffer but keep window
+nnoremap <silent> <Leader>bd :Bclose<CR>
 " Toggle netrw on left split
 map <silent> <F5> :Lexplore<CR>
 " Tagbar
