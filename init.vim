@@ -141,6 +141,8 @@ nnoremap <silent> <Leader>bd :Bclose<CR>
 map <silent> <F5> :Lexplore<CR>
 " Tagbar
 nmap <F2> :TagbarToggle<CR>
+" Ctrl+A to select all
+map <C-a> <esc>ggVG<CR>
 " Ctrl+C/Ctrl+V to copy/paste
 vmap <C-c> "+y
 imap <C-v> <esc>"+pi
