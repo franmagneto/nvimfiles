@@ -102,8 +102,8 @@ function! LoadSession()
 endfunction
 
 " Load session for the current directory and save it on close
-autocmd VimEnter * nested :call LoadSession() | Lexplore | wincmd p
-autocmd VimLeave * :call MakeSession()
+autocmd VimEnter * nested call LoadSession() | Lexplore | wincmd p
+autocmd VimLeave * call MakeSession()
 
 " Config netrw to be similar to NERDTree
 let g:netrw_banner = 0
@@ -116,9 +116,9 @@ let g:netrw_list_hide = '^\.git/,^\.hg/,^\.svn/,^\.bundle/'
 " Close nvim if netrw is the last buffer
 augroup netrw_close
   autocmd!
-  autocmd WinEnter * if winnr('$') == 1
-        \ && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"
-        \ | q | endif
+  autocmd QuitPre * if winnr('$') == 2 && winnr() != 1
+        \ && getbufvar(winbufnr(1), "&filetype") == "netrw"
+        \ | Lexplore | endif
 augroup END
 
 " Airline
