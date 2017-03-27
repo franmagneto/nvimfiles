@@ -102,8 +102,8 @@ function! LoadSession()
 endfunction
 
 " Load session for the current directory and save it on close
-au VimEnter * nested :call LoadSession()
-au VimLeave * :call MakeSession()
+autocmd VimEnter * nested :call LoadSession()
+autocmd VimLeave * :call MakeSession()
 
 " Config netrw to be similar to NERDTree
 let g:netrw_banner = 0
@@ -118,7 +118,7 @@ augroup netrw_close
   autocmd!
   autocmd WinEnter * if winnr('$') == 1
         \ && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"
-        \ | call MakeSession() | q | endif
+        \ | q | endif
 augroup END
 
 " Open netrw on start
