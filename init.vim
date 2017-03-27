@@ -102,7 +102,7 @@ function! LoadSession()
 endfunction
 
 " Load session for the current directory and save it on close
-autocmd VimEnter * nested :call LoadSession()
+autocmd VimEnter * nested :call LoadSession() | Lexplore | wincmd p
 autocmd VimLeave * :call MakeSession()
 
 " Config netrw to be similar to NERDTree
@@ -120,9 +120,6 @@ augroup netrw_close
         \ && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"
         \ | q | endif
 augroup END
-
-" Open netrw on start
-autocmd VimEnter * Lexplore | wincmd p
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
