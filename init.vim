@@ -34,6 +34,7 @@ Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tikhomirov/vim-glsl'
+Plug 'moll/vim-node'
 
 " Appearance
 Plug 'tomasr/molokai'
