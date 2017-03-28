@@ -135,6 +135,9 @@ let g:tagbar_width = 30
 
 " Close buffer but keep window
 nnoremap <silent> <Leader>bd :Bclose<CR>
+" Jump between quickfixes
+map cn :cn<CR>
+map cp :cp<CR>
 " Toggle netrw on left split
 map <silent> <F5> :Lexplore<CR>
 " Tagbar
