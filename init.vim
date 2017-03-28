@@ -19,7 +19,7 @@ Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 " Utilities
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
