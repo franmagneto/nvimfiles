@@ -170,8 +170,7 @@ set termguicolors
 colorscheme molokai
 
 " Highlight the 80th column
-set tw=79
-set colorcolumn=+1
+set colorcolumn=80
 
 " Set indent to 2 spaces, not expanded, but let plugins to override it
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
