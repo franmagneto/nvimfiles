@@ -18,13 +18,13 @@ Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
 " Utilities
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdcommenter'
+Plug 'ctrlpvim/ctrlp.vim' " Search files, mru, etc
+Plug 'scrooloose/nerdcommenter' " Toggle comments
 Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'danro/rename.vim'
+Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
+Plug 'danro/rename.vim' " Rename file in place
 
 " Git
 Plug 'airblade/vim-gitgutter'
