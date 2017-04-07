@@ -27,8 +27,8 @@ Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 
 " Git
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter' " Show modified lines
+Plug 'tpope/vim-fugitive' " Git commands and status of files
 
 " Syntax
 Plug 'tpope/vim-rails'
