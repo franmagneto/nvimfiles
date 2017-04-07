@@ -24,6 +24,7 @@ Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim'
+Plug 'danro/rename.vim'
 
 " Git
 Plug 'airblade/vim-gitgutter'
