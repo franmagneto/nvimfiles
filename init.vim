@@ -58,8 +58,9 @@ if has('conceal')
 endif
 
 " Neomake
-autocmd! BufEnter * Neomake
+autocmd! BufEnter * if getbufvar(winbufnr(winnr('$')), "&filetype") != "qf" | Neomake | endif
 autocmd! BufWritePost * Neomake
+let g:neomake_open_list = 2
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
