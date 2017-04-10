@@ -11,7 +11,6 @@ call plug#begin()
 " IDE
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'
-Plug 'vim-syntastic/syntastic'
 Plug 'neomake/neomake'
 Plug 'majutsushi/tagbar'
 Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
@@ -44,8 +43,8 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Deoplete + Neosnippet
-let g:deoplete#enable_at_startup = 1 
-let g:deoplete#enable_smart_case = 1 
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
 imap <expr><TAB> pumvisible() ? "\<C-n>" :
       \ neosnippet#expandable_or_jumpable() ?
@@ -58,9 +57,9 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-" Syntastic 
-let g:syntastic_check_on_open = 1
-let g:syntastic_enable_signs = 0
+" Neomake
+autocmd! BufEnter * Neomake
+autocmd! BufWritePost * Neomake
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
@@ -154,8 +153,6 @@ nmap <F9> :terminal ./%<CR>
 " Run "make" and "make clean" on current directory
 nmap <F8> :Neomake! "make -j$(nproc)"<CR>
 nmap <F7> :Neomake! "make clean"<CR>
-" Syntastic
-nmap <leader>e :Errors<CR>
 " Create tab with new buffer
 nnoremap tt  :tabnew<CR>
 " Buffer Next and Previous
