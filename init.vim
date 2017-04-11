@@ -58,7 +58,7 @@ if has('conceal')
 endif
 
 " Neomake
-autocmd! BufEnter * if getbufvar(winbufnr(winnr('$')), "&filetype") != "qf" | Neomake | endif
+autocmd! BufWinEnter * if getbufvar(bufnr('%'), "&filetype") != "qf" | Neomake | endif
 autocmd! BufWritePost * Neomake
 let g:neomake_open_list = 2
 
