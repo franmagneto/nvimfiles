@@ -166,6 +166,9 @@ nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
 " Start rails server on split or vsplit terminal
 nmap <leader>r :10split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
 nmap <leader>vr :vsplit \| wincmd p \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
+" Same with nodemon
+nmap <leader>n :10split \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
+nmap <leader>vn :vsplit \| wincmd p \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
 
 " Theme
 set termguicolors
