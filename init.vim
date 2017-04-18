@@ -160,10 +160,12 @@ nnoremap tt  :tabnew<CR>
 " Buffer Next and Previous
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
-" Open terminal on vsplit
-nmap <leader>t :vsplit \| wincmd p \| terminal<CR>
-" Start rails server on split terminal
+" Open terminal on split or vsplit
+nmap <leader>t :10split \| terminal<CR>
+nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
+" Start rails server on split or vsplit terminal
 nmap <leader>r :10split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
+nmap <leader>vr :vsplit \| wincmd p \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
 
 " Theme
 set termguicolors
