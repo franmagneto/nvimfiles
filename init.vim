@@ -190,4 +190,5 @@ set noswapfile
 set linebreak
 set nolist
 set splitbelow
+set mouse=a
 let g:tex_flavor = "latex"
