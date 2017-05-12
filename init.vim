@@ -17,6 +17,7 @@ Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
 " Utilities
 Plug 'scrooloose/nerdtree' " File browser
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
 Plug 'ctrlpvim/ctrlp.vim' " Search files, mru, etc
 Plug 'scrooloose/nerdcommenter' " Toggle comments
