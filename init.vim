@@ -16,6 +16,7 @@ Plug 'majutsushi/tagbar'
 Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
 " Utilities
+Plug 'scrooloose/nerdtree' " File browser
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
 Plug 'ctrlpvim/ctrlp.vim' " Search files, mru, etc
 Plug 'scrooloose/nerdcommenter' " Toggle comments
@@ -105,24 +106,11 @@ function! LoadSession()
 endfunction
 
 " Load session for the current directory and save it on close
-autocmd VimEnter * nested call LoadSession() | Lexplore | wincmd p
+autocmd VimEnter * nested call LoadSession() | NERDTree | wincmd p
 autocmd VimLeave * call MakeSession()
 
-" Config netrw to be similar to NERDTree
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = -25
-let g:netrw_list_hide = '^\.git/,^\.hg/,^\.svn/,^\.bundle/'
-
-" Close nvim if netrw is the last buffer
-augroup netrw_close
-  autocmd!
-  autocmd QuitPre * if winnr('$') == 2 && winnr() != 1
-        \ && getbufvar(winbufnr(1), "&filetype") == "netrw"
-        \ | Lexplore | endif
-augroup END
+" Close nvim if NERDTree is the last window
+autocmd QuitPre * if winnr("$") == 2 && getbufvar(winbufnr(1), "&filetype") == "nerdtree" | NERDTreeClose | endif
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -141,8 +129,8 @@ nnoremap <silent> <Leader>bd :Bclose<CR>
 " Jump between quickfixes
 map cn :cn<CR>
 map cp :cp<CR>
-" Toggle netrw on left split
-map <silent> <F5> :Lexplore<CR>
+" Toggle NERDTree
+map <silent> <F5> :NERDTreeToggle<CR>
 " Tagbar
 nmap <F2> :TagbarToggle<CR>
 " Ctrl+A to select all
