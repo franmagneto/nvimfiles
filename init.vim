@@ -40,8 +40,8 @@ Plug 'moll/vim-node'
 Plug 'digitaltoad/vim-pug'
 
 " Appearance
-Plug 'tomasr/molokai'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -161,7 +161,8 @@ nmap <leader>vn :vsplit \| wincmd p \| terminal nodemon<CR><C-\><C-n>:wincmd p<C
 
 " Theme
 set termguicolors
-colorscheme molokai
+set background=dark
+colorscheme one
 
 " Highlight the 80th column
 set colorcolumn=80
