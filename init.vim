@@ -146,13 +146,13 @@ nnoremap tt  :tabnew<CR>
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
 " Open terminal on split or vsplit
-nmap <leader>t :10split \| terminal<CR>
+nmap <leader>t :12split \| terminal<CR>
 nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
 " Start rails server on split or vsplit terminal
-nmap <leader>r :10split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
+nmap <leader>r :12split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
 nmap <leader>vr :vsplit \| wincmd p \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
 " Same with nodemon
-nmap <leader>n :10split \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
+nmap <leader>n :12split \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
 nmap <leader>vn :vsplit \| wincmd p \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
 
 " Theme
