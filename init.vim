@@ -120,6 +120,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:tagbar_compact = 1
 let g:tagbar_width = 30
 
+" Terminal settings (no line numbers; start in Terminal-mode)
+autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
+
 " Mappings
 
 " Close buffer but keep window
@@ -167,6 +170,7 @@ set colorcolumn=80
 
 " Set indent to 2 spaces, not expanded, but let plugins to override it
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd filetype c,cpp,make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 filetype plugin indent on
 
 " Misc
