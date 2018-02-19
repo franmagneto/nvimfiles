@@ -38,6 +38,7 @@ Plug 'slim-template/vim-slim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tikhomirov/vim-glsl'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'moll/vim-node'
 Plug 'digitaltoad/vim-pug'
 
@@ -173,6 +174,9 @@ set colorcolumn=80
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd filetype c,cpp,make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 filetype plugin indent on
+
+" JSX
+let g:jsx_ext_required = 0
 
 " Misc
 set hidden
