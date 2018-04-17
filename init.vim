@@ -60,9 +60,7 @@ imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 
 " Neomake
-autocmd! BufWinEnter * if getbufvar(bufnr('%'), "&filetype") != "qf" | Neomake | endif
-autocmd! BufWritePost * Neomake
-let g:neomake_open_list = 2
+call neomake#configure#automake('nrwi', 500)
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
