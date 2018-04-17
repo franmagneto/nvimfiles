@@ -139,25 +139,12 @@ map <C-a> <esc>ggVG<CR>
 " Ctrl+C/Ctrl+V to copy/paste
 vmap <C-c> "+y
 imap <C-v> <esc>"+pi
-" Run current file on terminal
-nmap <F9> :terminal ./%<CR>
-" Run "make" and "make clean" on current directory
-nmap <F8> :Neomake! "make -j$(nproc)"<CR>
-nmap <F7> :Neomake! "make clean"<CR>
-" Create tab with new buffer
-nnoremap tt  :tabnew<CR>
 " Buffer Next and Previous
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
 " Open terminal on split or vsplit
 nmap <leader>t :12split \| terminal<CR>
 nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
-" Start rails server on split or vsplit terminal
-nmap <leader>r :12split \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
-nmap <leader>vr :vsplit \| wincmd p \| terminal rails s<CR><C-\><C-n>:wincmd p<CR>
-" Same with nodemon
-nmap <leader>n :12split \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
-nmap <leader>vn :vsplit \| wincmd p \| terminal nodemon<CR><C-\><C-n>:wincmd p<CR>
 
 " Theme
 set termguicolors
