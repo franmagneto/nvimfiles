@@ -33,9 +33,7 @@ Plug 'airblade/vim-gitgutter' " Show modified lines
 Plug 'tpope/vim-fugitive' " Git commands and status of files
 
 " Syntax
-Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
-Plug 'kchmck/vim-coffee-script'
 Plug 'tikhomirov/vim-glsl'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
