@@ -168,4 +168,5 @@ set linebreak
 set nolist
 set splitbelow
 set mouse=a
+set backupcopy=yes
 let g:tex_flavor = "latex"
