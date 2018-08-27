@@ -58,6 +58,7 @@ imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 
 " Neomake
 call neomake#configure#automake('nrwi', 500)
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
