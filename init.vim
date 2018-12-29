@@ -118,6 +118,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:tagbar_compact = 1
 let g:tagbar_width = 30
 
+" gitgutter
+let g:gitgutter_max_signs = 1000
+
 " Terminal settings (no line numbers; start in Terminal-mode)
 autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
 
