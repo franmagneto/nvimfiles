@@ -121,6 +121,9 @@ let g:tagbar_width = 30
 " gitgutter
 let g:gitgutter_max_signs = 1000
 
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+
 " Terminal settings (no line numbers; start in Terminal-mode)
 autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
 
