@@ -1,7 +1,7 @@
 " Install vim-plug if it's not installed yet
 if empty(glob(stdpath('data').'/site/autoload/plug.vim'))
-  exe "!curl -fLo ".stdpath('data')."/site/autoload/plug.vim --create-dirs ".
-        \"'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
+  exe "silent !curl -fLo ".stdpath('data')."/site/autoload/plug.vim --create-dirs"
+        \." 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
   autocmd VimEnter * PlugInstall | nested source $MYVIMRC
 endif
 
