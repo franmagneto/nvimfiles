@@ -78,19 +78,28 @@ endif
 
 " Create session per directory (http://vim.wikia.com/wiki/Go_away_and_come_back)
 function! MakeSession()
-  if (getcwd() != $HOME)
-    let b:sessiondir = stdpath('config') . "/sessions" . getcwd()
-    if (filewritable(b:sessiondir) != 2)
-      exe 'silent !mkdir -p ' b:sessiondir
-      redraw!
-    endif
-    let b:filename = b:sessiondir . '/session.vim'
-    exe "mksession! " . b:filename
+  let b:sessiondir = stdpath('config') . "/sessions" . getcwd()
+  if (filewritable(b:sessiondir) != 2)
+    exe 'silent !mkdir -p ' b:sessiondir
+    redraw!
+  endif
+  let b:sessionfile = b:sessiondir . '/session.vim'
+  exe "mksession! " . b:sessionfile
+endfunction
+
+" Save current session
+function! SaveSession()
+  if v:this_session != ""
+    echo "Saving."
+    exe 'mksession! ' . v:this_session
+  else
+    echo "No Session."
   endif
 endfunction
 
+" Loads a session if it exists and nvim was called with no arguments
 function! LoadSession()
-  if (getcwd() != $HOME)
+  if argc() == 0
     let b:sessiondir = stdpath('config') . "/sessions" . getcwd()
     let b:sessionfile = b:sessiondir . "/session.vim"
     if (filereadable(b:sessionfile))
@@ -103,7 +112,7 @@ endfunction
 
 " Load session for the current directory and save it on close
 autocmd VimEnter * nested call LoadSession() | NERDTree | wincmd p
-autocmd VimLeave * call MakeSession()
+autocmd VimLeave * :call SaveSession()
 
 " Close nvim if NERDTree is the last window
 autocmd QuitPre * if winnr("$") == 2 && getbufvar(winbufnr(1), "&filetype") == "nerdtree" | NERDTreeClose | endif
@@ -149,6 +158,8 @@ nnoremap bn :bnext<CR>
 " Open terminal on split or vsplit
 nmap <leader>t :12split \| terminal<CR>
 nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
+" Create session for current directory
+map <leader>m :call MakeSession()<CR>
 
 " Theme
 set termguicolors
