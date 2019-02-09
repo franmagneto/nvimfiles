@@ -1,7 +1,7 @@
 " Install vim-plug if it's not installed yet
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob(stdpath('data').'/site/autoload/plug.vim'))
+  exe "!curl -fLo ".stdpath('data')."/site/autoload/plug.vim --create-dirs ".
+        \"'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
   autocmd VimEnter * PlugInstall | nested source $MYVIMRC
 endif
 
@@ -79,7 +79,7 @@ endif
 " Create session per directory (http://vim.wikia.com/wiki/Go_away_and_come_back)
 function! MakeSession()
   if (getcwd() != $HOME)
-    let b:sessiondir = $HOME . "/.config/nvim/sessions" . getcwd()
+    let b:sessiondir = stdpath('config') . "/sessions" . getcwd()
     if (filewritable(b:sessiondir) != 2)
       exe 'silent !mkdir -p ' b:sessiondir
       redraw!
@@ -91,7 +91,7 @@ endfunction
 
 function! LoadSession()
   if (getcwd() != $HOME)
-    let b:sessiondir = $HOME . "/.config/nvim/sessions" . getcwd()
+    let b:sessiondir = stdpath('config') . "/sessions" . getcwd()
     let b:sessionfile = b:sessiondir . "/session.vim"
     if (filereadable(b:sessionfile))
       exe 'source ' b:sessionfile
