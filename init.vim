@@ -160,8 +160,8 @@ map <leader>m :call MakeSession()<CR>
 
 " Theme
 set termguicolors
-colorscheme onedark
 let g:onedark_terminal_italics = 1
+colorscheme onedark
 
 " Highlight the 80th column
 set colorcolumn=80
