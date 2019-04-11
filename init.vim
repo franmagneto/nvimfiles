@@ -169,7 +169,7 @@ set colorcolumn=80
 
 " Set indent to 2 spaces, not expanded, but let plugins to override it
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd filetype c,cpp,make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+autocmd filetype make setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 filetype plugin indent on
 
 " Misc
