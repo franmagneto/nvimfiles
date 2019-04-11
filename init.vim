@@ -36,7 +36,7 @@ Plug 'tpope/vim-fugitive' " Git commands and status of files
 Plug 'sheerun/vim-polyglot'
 
 " Appearance
-Plug 'tomasr/molokai'
+Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
@@ -160,9 +160,7 @@ map <leader>m :call MakeSession()<CR>
 
 " Theme
 set termguicolors
-set background=dark
-let g:molokai_original = 1
-colorscheme molokai
+colorscheme onedark
 
 " Highlight the 80th column
 set colorcolumn=80
