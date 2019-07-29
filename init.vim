@@ -36,7 +36,7 @@ Plug 'tpope/vim-fugitive' " Git commands and status of files
 Plug 'sheerun/vim-polyglot'
 
 " Appearance
-Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
@@ -160,8 +160,7 @@ map <leader>m :call MakeSession()<CR>
 
 " Theme
 set termguicolors
-let g:onedark_terminal_italics = 1
-colorscheme onedark
+colorscheme dracula
 
 " Highlight the 80th column
 set colorcolumn=80
