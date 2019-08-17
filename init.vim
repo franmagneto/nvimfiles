@@ -27,6 +27,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
+Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Git
 Plug 'airblade/vim-gitgutter' " Show modified lines
