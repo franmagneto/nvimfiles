@@ -28,6 +28,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'benmills/vimux'
 
 " Git
 Plug 'airblade/vim-gitgutter' " Show modified lines
@@ -134,6 +135,10 @@ let g:NERDSpaceDelims = 1
 " Terminal settings (no line numbers; start in Terminal-mode)
 autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
 
+" Vimux
+let g:VimuxOrientation = 'h'
+let g:VimuxHeight = 30
+
 " Mappings
 
 " Close buffer but keep window
@@ -158,6 +163,24 @@ nmap <leader>t :12split \| terminal<CR>
 nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
 " Create session for current directory
 map <leader>m :call MakeSession()<CR>
+" Vimux
+" Run npm scripts
+map <Leader>vd :VimuxRunCommand('npm run dev')<CR>
+map <Leader>vs :VimuxRunCommand('npm start')<CR>
+map <Leader>vc :VimuxRunCommand('npm ci')<CR>
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vn :VimuxPromptCommand('npm ')<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR>
 
 " Theme
 set termguicolors
