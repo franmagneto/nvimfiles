@@ -166,11 +166,12 @@ map <leader>m :call MakeSession()<CR>
 " Vimux
 " Run npm scripts
 map <Leader>vd :VimuxRunCommand('npm run dev')<CR>
+map <Leader>vb :VimuxRunCommand('npm run storybook')<CR>
 map <Leader>vs :VimuxRunCommand('npm start')<CR>
 map <Leader>vc :VimuxRunCommand('npm ci')<CR>
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vn :VimuxPromptCommand('npm ')<CR>
+map <Leader>vn :VimuxPromptCommand('npm run ')<CR>
 " Run last command executed by VimuxRunCommand
 map <Leader>vl :VimuxRunLastCommand<CR>
 " Inspect runner pane
