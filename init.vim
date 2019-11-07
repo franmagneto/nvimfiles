@@ -127,7 +127,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Gutentags
-let g:gutentags_cache_dir = stdpath('config') . '/tags'
+let g:gutentags_cache_dir = stdpath('cache')
 
 " Tagbar
 let g:tagbar_compact = 1
