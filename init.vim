@@ -13,6 +13,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'neomake/neomake'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 
@@ -124,6 +125,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " Only filename on tabs, no path
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Gutentags
+let g:gutentags_cache_dir = stdpath('config') . '/tags'
 
 " Tagbar
 let g:tagbar_compact = 1
