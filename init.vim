@@ -16,6 +16,7 @@ Plug 'neomake/neomake'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
+Plug 'artur-shaik/vim-javacomplete2'
 
 " Utilities
 Plug 'scrooloose/nerdtree' " File browser
