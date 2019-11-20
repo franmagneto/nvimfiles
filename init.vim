@@ -29,9 +29,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 Plug 'benmills/vimux'
-if executable('discord')
-  Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins' }
-endif
+Plug 'ananagame/vimsence'
 
 " Git
 Plug 'airblade/vim-gitgutter' " Show modified lines
