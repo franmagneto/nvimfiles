@@ -164,9 +164,8 @@ imap <C-v> <esc>"+pi
 " Buffer Next and Previous
 nnoremap bp :bprevious<CR>
 nnoremap bn :bnext<CR>
-" Open terminal on split or vsplit
+" Open terminal on split
 nmap <leader>t :12split \| terminal<CR>
-nmap <leader>vt :vsplit \| wincmd p \| terminal<CR>
 " Create session for current directory
 map <leader>m :call MakeSession()<CR>
 " Vimux
@@ -174,6 +173,7 @@ map <leader>m :call MakeSession()<CR>
 map <Leader>vd :VimuxRunCommand('npm run dev')<CR>
 map <Leader>vb :VimuxRunCommand('npm run storybook')<CR>
 map <Leader>vs :VimuxRunCommand('npm start')<CR>
+map <Leader>vt :VimuxRunCommand('npm test')<CR>
 map <Leader>vc :VimuxRunCommand('npm ci')<CR>
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
