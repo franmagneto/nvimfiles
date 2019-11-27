@@ -43,7 +43,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Appearance
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 
 call plug#end()
