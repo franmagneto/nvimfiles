@@ -14,9 +14,7 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'neomake/neomake'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'majutsushi/tagbar'
-Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
-Plug 'artur-shaik/vim-javacomplete2'
+Plug 'liuchengxu/vista.vim'
 
 " Utilities
 Plug 'scrooloose/nerdtree' " File browser
@@ -127,10 +125,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " LanguageClient-neovim
 let g:LanguageClient_serverCommands = { 'javascript': ['javascript-typescript-stdio'] }
 
-" Tagbar
-let g:tagbar_compact = 1
-let g:tagbar_width = 30
-
 " gitgutter
 let g:gitgutter_max_signs = 1000
 
@@ -153,8 +147,8 @@ map cn :cn<CR>
 map cp :cp<CR>
 " Toggle NERDTree
 map <silent> <F5> :NERDTreeToggle<CR>
-" Tagbar
-nmap <F3> :TagbarToggle<CR>
+" Vista
+nmap <F3> :Vista!!<CR>
 " Ctrl+A to select all
 map <C-a> <esc>ggVG<CR>
 " Ctrl+C/Ctrl+V to copy/paste
