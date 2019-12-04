@@ -138,6 +138,15 @@ autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = 30
 
+" Vista
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+set statusline+=%{NearestMethodOrFunction()}
+
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
 " Mappings
 
 " Close buffer but keep window
