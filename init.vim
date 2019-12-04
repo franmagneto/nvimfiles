@@ -13,7 +13,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'neomake/neomake'
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'majutsushi/tagbar'
 Plug 'nacitar/a.vim' " Switch between .h and .c/.cpp files
 Plug 'artur-shaik/vim-javacomplete2'
@@ -124,8 +124,8 @@ let g:airline_powerline_fonts = 1
 " Only filename on tabs, no path
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Gutentags
-let g:gutentags_cache_dir = stdpath('cache')
+" LanguageClient-neovim
+let g:LanguageClient_serverCommands = { 'javascript': ['javascript-typescript-stdio'] }
 
 " Tagbar
 let g:tagbar_compact = 1
@@ -154,7 +154,7 @@ map cp :cp<CR>
 " Toggle NERDTree
 map <silent> <F5> :NERDTreeToggle<CR>
 " Tagbar
-nmap <F2> :TagbarToggle<CR>
+nmap <F3> :TagbarToggle<CR>
 " Ctrl+A to select all
 map <C-a> <esc>ggVG<CR>
 " Ctrl+C/Ctrl+V to copy/paste
@@ -187,6 +187,10 @@ map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
+" LanguageClient-neovim
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 " Theme
 set termguicolors
