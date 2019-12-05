@@ -42,7 +42,12 @@ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Coc
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-java']
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-tsserver',
+      \ 'coc-eslint',
+      \ 'coc-java',
+      \ ]
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
