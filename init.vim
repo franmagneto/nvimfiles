@@ -157,7 +157,7 @@ map cp :cp<CR>
 " Toggle NERDTree
 map <silent> <F5> :NERDTreeToggle<CR>
 " Vista
-nmap <F3> :Vista!!<CR>
+nmap <F2> :Vista!!<CR>
 " Ctrl+A to select all
 map <C-a> <esc>ggVG<CR>
 " Ctrl+C/Ctrl+V to copy/paste
@@ -193,7 +193,7 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 " LanguageClient-neovim
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> <Leader>rn :call LanguageClient#textDocument_rename()<CR>
 
 " Theme
 set termguicolors
@@ -218,4 +218,8 @@ set nolist
 set splitbelow
 set mouse=a
 set backupcopy=yes
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
 let g:tex_flavor = "latex"
