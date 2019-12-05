@@ -163,9 +163,7 @@ autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = 30
 
-set statusline+=%{NearestMethodOrFunction()}
-
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " Mappings
 
