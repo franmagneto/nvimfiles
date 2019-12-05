@@ -293,7 +293,6 @@ set nolist
 set splitbelow
 set mouse=a
 set backupcopy=yes
-set cmdheight=2
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
