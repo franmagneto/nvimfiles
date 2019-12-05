@@ -192,7 +192,7 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
 " LanguageClient-neovim
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <C-LeftMouse> :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <Leader>rn :call LanguageClient#textDocument_rename()<CR>
 
 " Theme
