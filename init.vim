@@ -177,6 +177,11 @@ autocmd TermOpen * setlocal nonumber norelativenumber | startinsert
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = 30
 
+" Syntax
+" Javascript with styled-components
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+" Jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " Mappings
