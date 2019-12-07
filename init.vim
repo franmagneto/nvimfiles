@@ -43,6 +43,7 @@ call plug#end()
 
 " Coc
 let g:coc_global_extensions = [
+      \ 'coc-vimlsp',
       \ 'coc-json',
       \ 'coc-tsserver',
       \ 'coc-eslint',
