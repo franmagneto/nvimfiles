@@ -92,12 +92,22 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
+function! CurrentFunction()
+  return get(b:, 'coc_current_function', '')
+endfunction
+
+" Show current function on Airline
+let g:airline_section_x = '%{airline#util#prepend("",0)}'
+      \. '%{airline#util#prepend(CurrentFunction(),0)}'
+      \. '%{airline#util#prepend("",0)}'
+      \. '%{airline#util#prepend("",0)}'
+      \. '%{airline#util#wrap(airline#parts#filetype(),0)}'
+
 " Vista
 let g:vista_executive_for = {
       \ 'javascript': 'coc',
       \ }
-" Enable show nearest function on statusline on enter Vim
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+let g:vista_disable_statusline = 1
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
