@@ -202,7 +202,7 @@ map cp :cp<CR>
 " Toggle NERDTree
 map <silent> <F5> :NERDTreeToggle<CR>
 " Vista
-nmap <F2> :Vista!!<CR>
+nmap <silent> <F2> :Vista!!<CR>
 " Ctrl+A to select all
 map <C-a> <esc>ggVG<CR>
 " Ctrl+C/Ctrl+V to copy/paste
