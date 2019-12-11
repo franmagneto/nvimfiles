@@ -108,6 +108,8 @@ let g:vista_executive_for = {
       \ 'javascript': 'coc',
       \ }
 let g:vista_disable_statusline = 1
+let g:vista_echo_cursor_strategy = 'floating_win'
+let g:vista_close_on_jump = 1
 
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
