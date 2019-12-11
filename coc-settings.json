@@ -1,5 +1,12 @@
 {
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.rootPatterns": [
+    ".vim",
+    ".git",
+    ".hg",
+    ".projections.json",
+    "pom.xml"
+  ],
   "languageserver": {
     "clangd": {
       "command": "clangd",
