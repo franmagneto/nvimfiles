@@ -51,6 +51,7 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-java',
       \ 'coc-rls',
+      \ 'coc-highlight',
       \ ]
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
