@@ -196,6 +196,13 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 " Jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
+" Java
+let java_highlight_functions = 1
+let java_highlight_all = 1
+let java_highlight_debug = 1
+highlight link javaScopeDecl Statement
+highlight link javaType Type
+highlight link javaDocTags PreProc
 
 " Rainbow
 let g:rainbow_active = 1
