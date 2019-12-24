@@ -21,6 +21,7 @@ Plug 'scrooloose/nerdcommenter' " Toggle comments
 Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
+Plug 'frazrepo/vim-rainbow'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 Plug 'benmills/vimux'
@@ -195,6 +196,9 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 " Jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" Rainbow
+let g:rainbow_active = 1
 
 " Mappings
 
