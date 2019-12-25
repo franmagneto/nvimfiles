@@ -34,6 +34,7 @@ Plug 'tpope/vim-fugitive' " Git commands and status of files
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'ron-rs/ron.vim'
 
 " Appearance
 Plug 'dracula/vim', { 'as': 'dracula' }
