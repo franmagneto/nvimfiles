@@ -53,6 +53,7 @@ let g:coc_global_extensions = [
       \ 'coc-css',
       \ 'coc-java',
       \ 'coc-rls',
+      \ 'coc-xml',
       \ 'coc-highlight',
       \ ]
 " Use tab for trigger completion with characters ahead and navigate.
