@@ -318,6 +318,9 @@ set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd filetype make setlocal noexpandtab
 filetype plugin indent on
 
+" Commands
+command W :execute ':silent w !sudo tee "%" > /dev/null' | :edit!
+
 " Misc
 set hidden
 set cul
