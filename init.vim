@@ -30,6 +30,7 @@ Plug 'ananagame/vimsence' " Discord rich presence
 " Git
 Plug 'airblade/vim-gitgutter' " Show modified lines
 Plug 'tpope/vim-fugitive' " Git commands and status of files
+Plug 'whiteinge/diffconflicts'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
