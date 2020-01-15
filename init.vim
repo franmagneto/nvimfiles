@@ -21,7 +21,6 @@ Plug 'scrooloose/nerdcommenter' " Toggle comments
 Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'Raimondi/delimitMate'
 Plug 'gregsexton/MatchTag'
-Plug 'frazrepo/vim-rainbow'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 Plug 'benmills/vimux'
@@ -206,9 +205,6 @@ let java_highlight_debug = 1
 highlight link javaScopeDecl Statement
 highlight link javaType Type
 highlight link javaDocTags PreProc
-
-" Rainbow
-let g:rainbow_active = 1
 
 " Mappings
 
