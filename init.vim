@@ -313,7 +313,7 @@ autocmd filetype make setlocal noexpandtab
 filetype plugin indent on
 
 " Commands
-command W :execute ':silent w !sudo tee "%" > /dev/null' | :edit!
+command! W :execute ':silent w !sudo tee "%" > /dev/null' | :edit!
 
 " Misc
 set hidden
