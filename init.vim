@@ -319,7 +319,7 @@ command! W :execute ':silent w !sudo tee "%" > /dev/null' | :edit!
 set hidden
 set cul
 set number
-set ic
+set ic scs tc=followscs
 set noswapfile
 set linebreak
 set nolist
