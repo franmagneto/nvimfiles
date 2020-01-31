@@ -113,6 +113,7 @@ let g:airline_section_x = '%{airline#util#prepend("",0)}'
 " Vista
 let g:vista_executive_for = {
       \ 'javascript': 'coc',
+      \ 'java': 'coc',
       \ }
 let g:vista_disable_statusline = 1
 let g:vista_echo_cursor_strategy = 'floating_win'
