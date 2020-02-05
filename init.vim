@@ -111,10 +111,9 @@ let g:airline_section_x = '%{airline#util#prepend("",0)}'
       \. '%{airline#util#wrap(airline#parts#filetype(),0)}'
 
 " Vista
+let g:vista_default_executive = 'coc'
 let g:vista_executive_for = {
-      \ 'javascript': 'coc',
-      \ 'java': 'coc',
-      \ }
+      \ 'vim': 'ctags'}
 let g:vista_disable_statusline = 1
 let g:vista_echo_cursor_strategy = 'floating_win'
 let g:vista_close_on_jump = 1
