@@ -204,6 +204,8 @@ let java_highlight_debug = 1
 highlight link javaScopeDecl Statement
 highlight link javaType Type
 highlight link javaDocTags PreProc
+" YAML
+let g:polyglot_disabled = ['yaml'] " The native syntax file is better
 
 " Mappings
 
