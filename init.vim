@@ -26,6 +26,7 @@ Plug 'danro/rename.vim' " Rename file in place
 Plug 'benmills/vimux'
 Plug 'ananagame/vimsence' " Discord rich presence
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-characterize'
 
 " Git
 Plug 'airblade/vim-gitgutter' " Show modified lines
