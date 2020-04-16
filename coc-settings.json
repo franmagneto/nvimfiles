@@ -15,5 +15,6 @@
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     }
   },
-  "rust-client.disableRustup": true
+  "rust-client.disableRustup": true,
+  "python.jediEnabled": false
 }
