@@ -62,6 +62,7 @@ let g:coc_global_extensions = [
       \ 'coc-python',
       \ 'coc-cmake',
       \ 'coc-vetur',
+      \ 'coc-clangd',
       \ ]
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
