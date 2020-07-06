@@ -24,7 +24,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 Plug 'benmills/vimux'
-Plug 'ananagame/vimsence' " Discord rich presence
+Plug 'hugolgst/vimsence' " Discord rich presence
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-characterize'
 
@@ -63,6 +63,7 @@ let g:coc_global_extensions = [
       \ 'coc-cmake',
       \ 'coc-vetur',
       \ 'coc-clangd',
+      \ 'coc-solargraph',
       \ ]
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
