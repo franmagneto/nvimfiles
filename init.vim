@@ -47,6 +47,9 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
 
+let g:vimsence_small_text = 'NeoVim'
+let g:vimsence_small_image = 'neovim'
+
 " Coc
 let g:coc_global_extensions = [
       \ 'coc-vimlsp',
