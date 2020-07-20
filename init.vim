@@ -37,6 +37,7 @@ Plug 'whiteinge/diffconflicts'
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'ron-rs/ron.vim'
+Plug 'kevinoid/vim-jsonc'
 
 " Appearance
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -205,8 +206,6 @@ let g:VimuxHeight = 30
 " Javascript with styled-components
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-" Jsonc
-autocmd FileType json syntax match Comment +\/\/.\+$+
 " Java
 let java_highlight_functions = 1
 let java_highlight_all = 1
