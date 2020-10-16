@@ -35,7 +35,11 @@ Plug 'whiteinge/diffconflicts'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 Plug 'ron-rs/ron.vim'
 Plug 'kevinoid/vim-jsonc'
 
@@ -57,6 +61,8 @@ let g:coc_global_extensions = [
       \ 'coc-json',
       \ 'coc-tsserver',
       \ 'coc-eslint',
+      \ 'coc-prettier',
+      \ 'coc-deno',
       \ 'coc-html',
       \ 'coc-css',
       \ 'coc-java',
@@ -215,7 +221,7 @@ highlight link javaScopeDecl Statement
 highlight link javaType Type
 highlight link javaDocTags PreProc
 " YAML
-let g:polyglot_disabled = ['yaml'] " The native syntax file is better
+let g:polyglot_disabled = ['yaml', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact']
 
 " Mappings
 
