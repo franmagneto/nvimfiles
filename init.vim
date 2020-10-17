@@ -35,11 +35,6 @@ Plug 'whiteinge/diffconflicts'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
 Plug 'ron-rs/ron.vim'
 Plug 'kevinoid/vim-jsonc'
 
@@ -220,8 +215,6 @@ let java_highlight_debug = 1
 highlight link javaScopeDecl Statement
 highlight link javaType Type
 highlight link javaDocTags PreProc
-" YAML
-let g:polyglot_disabled = ['yaml', 'javascript', 'javascriptreact', 'typescript', 'typescript.tsx']
 
 " Mappings
 
