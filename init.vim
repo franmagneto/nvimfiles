@@ -221,7 +221,7 @@ highlight link javaScopeDecl Statement
 highlight link javaType Type
 highlight link javaDocTags PreProc
 " YAML
-let g:polyglot_disabled = ['yaml', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact']
+let g:polyglot_disabled = ['yaml', 'javascript', 'javascriptreact', 'typescript', 'typescript.tsx']
 
 " Mappings
 
