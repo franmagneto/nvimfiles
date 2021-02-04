@@ -61,7 +61,7 @@ let g:coc_global_extensions = [
       \ 'coc-html',
       \ 'coc-css',
       \ 'coc-java',
-      \ 'coc-rls',
+      \ 'coc-rust-analyzer',
       \ 'coc-xml',
       \ 'coc-highlight',
       \ 'coc-python',

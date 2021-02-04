@@ -1,6 +1,5 @@
 {
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "rust-client.disableRustup": true,
   "python.jediEnabled": false,
   "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "prettier.disableSuccessMessage": true,
