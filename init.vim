@@ -12,9 +12,11 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'liuchengxu/vista.vim'
 
+" Fern (file explorer)
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-hijack.vim'
 " Utilities
-Plug 'scrooloose/nerdtree' " File browser
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
 Plug 'ctrlpvim/ctrlp.vim' " Search files, mru, etc
 Plug 'scrooloose/nerdcommenter' " Toggle comments
@@ -42,8 +44,6 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
 
@@ -179,16 +179,8 @@ function! LoadSession()
 endfunction
 
 " Load session for the current directory and save it on close
-autocmd VimEnter * nested call LoadSession() | NERDTree | wincmd p
+autocmd VimEnter * nested call LoadSession() | Fern . -drawer | wincmd p
 autocmd VimLeave * :call SaveSession()
-
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-
-" If another buffer tries to replace NERDTree, put in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -228,8 +220,8 @@ nnoremap <silent> <Leader>bd :Bclose<CR>
 " Jump between quickfixes
 map cn :cn<CR>
 map cp :cp<CR>
-" Toggle NERDTree
-map <silent> <F5> :NERDTreeToggle<CR>
+" Toggle Fern
+nmap <silent> <F5> :Fern . -drawer -toggle \| wincmd p<CR>
 " Vista
 nmap <silent> <F2> :Vista!!<CR>
 " Ctrl+A to select all
