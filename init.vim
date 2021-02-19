@@ -15,6 +15,8 @@ Plug 'liuchengxu/vista.vim'
 " Fern (file explorer)
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern-mapping-git.vim'
 " Utilities
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
