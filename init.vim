@@ -19,6 +19,7 @@ Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/fern-mapping-git.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/glyph-palette.vim'
 
 " Utilities
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -189,6 +190,12 @@ autocmd VimLeave * :call SaveSession()
 
 " Fern
 let g:fern#renderer = "nerdfont"
+
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
