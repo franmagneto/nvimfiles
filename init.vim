@@ -17,6 +17,9 @@ Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/fern-mapping-git.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+
 " Utilities
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
@@ -183,6 +186,9 @@ endfunction
 " Load session for the current directory and save it on close
 autocmd VimEnter * nested call LoadSession() | Fern . -drawer | wincmd p
 autocmd VimLeave * :call SaveSession()
+
+" Fern
+let g:fern#renderer = "nerdfont"
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
