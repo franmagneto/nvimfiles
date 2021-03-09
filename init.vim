@@ -12,16 +12,8 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'liuchengxu/vista.vim'
 
-" Fern (file explorer)
-Plug 'lambdalisue/fern.vim'
-Plug 'lambdalisue/fern-hijack.vim'
-Plug 'lambdalisue/fern-git-status.vim'
-Plug 'lambdalisue/fern-mapping-git.vim'
-Plug 'lambdalisue/nerdfont.vim'
-Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-Plug 'lambdalisue/glyph-palette.vim'
-
 " Utilities
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'farmergreg/vim-lastplace' " Restore cursor position
 Plug 'ctrlpvim/ctrlp.vim' " Search files, mru, etc
@@ -185,17 +177,22 @@ function! LoadSession()
 endfunction
 
 " Load session for the current directory and save it on close
-autocmd VimEnter * nested call LoadSession() | Fern . -drawer | wincmd p
+autocmd VimEnter * nested call LoadSession() | CHADopen --nofocus
 autocmd VimLeave * :call SaveSession()
 
-" Fern
-let g:fern#renderer = "nerdfont"
+" CHADTree
+let g:chadtree_settings = { "options.session": v:false }
 
-augroup my-glyph-palette
-  autocmd! *
-  autocmd FileType fern call glyph_palette#apply()
-  autocmd FileType nerdtree,startify call glyph_palette#apply()
-augroup END
+" Close Neovim if last window is CHADTree
+au BufEnter * call LastWindow()
+function! LastWindow()
+  if &filetype=="CHADTree"
+    " if this window is last on screen quit without warning
+    if winbufnr(2) == -1
+      quit!
+    endif
+  endif
+endfunction
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -235,8 +232,8 @@ nnoremap <silent> <Leader>bd :Bclose<CR>
 " Jump between quickfixes
 map cn :cn<CR>
 map cp :cp<CR>
-" Toggle Fern
-nmap <silent> <F5> :Fern . -drawer -toggle \| wincmd p<CR>
+" Toggle CHADTree
+nnoremap <F5> <cmd>CHADopen --nofocus<cr>
 " Vista
 nmap <silent> <F2> :Vista!!<CR>
 " Ctrl+A to select all
