@@ -1,6 +1,5 @@
 {
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "python.jediEnabled": false,
   "prettier.disableSuccessMessage": true,
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true

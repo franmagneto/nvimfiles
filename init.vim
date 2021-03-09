@@ -70,7 +70,7 @@ let g:coc_global_extensions = [
       \ 'coc-rust-analyzer',
       \ 'coc-xml',
       \ 'coc-highlight',
-      \ 'coc-python',
+      \ 'coc-pyright',
       \ 'coc-cmake',
       \ 'coc-vetur',
       \ 'coc-clangd',
