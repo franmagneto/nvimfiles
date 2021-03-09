@@ -184,6 +184,7 @@ autocmd VimLeave * :call SaveSession()
 let g:chadtree_settings = { "options.session": v:false }
 
 " Close Neovim if last window is CHADTree
+" (based on https://vim.fandom.com/wiki/Automatically_quit_Vim_if_quickfix_window_is_the_last)
 au BufEnter * call LastWindow()
 function! LastWindow()
   if &filetype=="CHADTree"
