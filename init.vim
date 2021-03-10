@@ -42,6 +42,7 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
