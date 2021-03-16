@@ -24,7 +24,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
 Plug 'danro/rename.vim' " Rename file in place
 Plug 'benmills/vimux'
-Plug 'hugolgst/vimsence' " Discord rich presence
+Plug 'vimsence/vimsence' " Discord rich presence
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-characterize'
 
