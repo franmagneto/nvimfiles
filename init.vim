@@ -37,6 +37,7 @@ Plug 'whiteinge/diffconflicts'
 Plug 'sheerun/vim-polyglot'
 Plug 'ron-rs/ron.vim'
 Plug 'kevinoid/vim-jsonc'
+Plug 'boeckmann/vim-freepascal'
 
 " Appearance
 Plug 'dracula/vim', { 'as': 'dracula' }
