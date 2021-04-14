@@ -40,7 +40,7 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'boeckmann/vim-freepascal'
 
 " Appearance
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'ryanoasis/vim-devicons'
@@ -327,7 +327,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " Theme
 set termguicolors
-colorscheme dracula
+colorscheme gruvbox-material
 
 " Highlight the 80th column
 set colorcolumn=80
