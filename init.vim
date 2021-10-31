@@ -46,6 +46,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ron-rs/ron.vim'
 Plug 'kevinoid/vim-jsonc'
 Plug 'boeckmann/vim-freepascal'
+Plug 'ARM9/snes-syntax-vim'
 
 " Appearance
 Plug 'sainnhe/gruvbox-material'
@@ -310,6 +311,7 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = 30
 
 " Syntax
+au BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass
 " Java
 let java_highlight_functions = 1
 let java_highlight_all = 1
