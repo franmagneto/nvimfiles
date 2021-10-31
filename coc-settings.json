@@ -1,6 +1,0 @@
-{
-  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "prettier.disableSuccessMessage": true,
-  "tsserver.formatOnType": true,
-  "coc.preferences.formatOnType": true
-}
