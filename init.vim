@@ -95,7 +95,22 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-require("nvim-lsp-installer").on_server_ready(function(server)
+local lsp_installer = require("nvim-lsp-installer")
+
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'jdtls' }
+
+for _, name in pairs(servers) do
+	local ok, server = lsp_installer.get_server(name)
+	-- Check that the server is supported in nvim-lsp-installer
+	if ok then
+		if not server:is_installed() then
+			print("Installing " .. name)
+			server:install()
+		end
+	end
+end
+
+lsp_installer.on_server_ready(function(server)
     local opts = {
       on_attach = on_attach,
       capabilities = capabilities,
