@@ -57,25 +57,6 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 lua <<EOF
-local lsp_installer = require("nvim-lsp-installer")
-local nvim_lsp = require('lspconfig')
-
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --   opts.root_dir = function() return vim.loop.cwd() end
-    -- end
-
-    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-    server:setup(opts)
-    vim.cmd [[ do User LspAttachBuffers ]]
-end)
-
--- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -110,17 +91,29 @@ local on_attach = function(client, bufnr)
 
 end
 
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'jdtls' }
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+require("nvim-lsp-installer").on_server_ready(function(server)
+    local opts = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      flags = {
+        debounce_text_changes = 150,
+      }
     }
-  }
-end
+    
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --   opts.root_dir = function() return vim.loop.cwd() end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
+
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
