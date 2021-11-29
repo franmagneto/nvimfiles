@@ -30,7 +30,7 @@ Plug 'Shougo/vinarise.vim' " HEX editor
 Plug 'cohama/lexima.vim'
 Plug 'gregsexton/MatchTag'
 Plug 'rbgrouleff/bclose.vim' " Close buffer without close window
-Plug 'danro/rename.vim' " Rename file in place
+Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most.
 Plug 'benmills/vimux'
 Plug 'vimsence/vimsence' " Discord rich presence
 Plug 'terryma/vim-multiple-cursors'
