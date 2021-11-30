@@ -42,10 +42,8 @@ Plug 'tpope/vim-fugitive' " Git commands and status of files
 Plug 'whiteinge/diffconflicts'
 
 " Syntax
-Plug 'sheerun/vim-polyglot'
-Plug 'ron-rs/ron.vim'
-Plug 'kevinoid/vim-jsonc'
-Plug 'boeckmann/vim-freepascal'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'windwp/nvim-ts-autotag'
 Plug 'ARM9/snes-syntax-vim'
 
 " Appearance
@@ -220,6 +218,22 @@ dap.configurations.rust = dap.configurations.cpp
 
 require('rust-tools').setup({})
 
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    -- additional_vim_regex_highlighting = false,
+  },
+  autotag = {
+    enable = true,
+  },
+}
+
 EOF
 
 let g:vimsence_small_text = 'NeoVim'
@@ -320,13 +334,6 @@ let g:VimuxHeight = 30
 
 " Syntax
 au BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass
-" Java
-let java_highlight_functions = 1
-let java_highlight_all = 1
-let java_highlight_debug = 1
-highlight link javaScopeDecl Statement
-highlight link javaType Type
-highlight link javaDocTags PreProc
 
 " Mappings
 
