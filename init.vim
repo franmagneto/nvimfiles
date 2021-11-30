@@ -47,7 +47,7 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'ARM9/snes-syntax-vim'
 
 " Appearance
-Plug 'sainnhe/gruvbox-material'
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'ryanoasis/vim-devicons'
@@ -390,7 +390,7 @@ nnoremap <silent> <leader>dl :lua require'dap'.run_last()<CR>
 
 " Theme
 set termguicolors
-colorscheme gruvbox-material
+colorscheme dracula
 
 " Highlight the 80th column
 set colorcolumn=80
