@@ -24,7 +24,6 @@ require 'paq' {
   'liuchengxu/vista.vim';
   'antoinemadec/FixCursorHold.nvim';
   'farmergreg/vim-lastplace'; -- Restore cursor position
-  'ctrlpvim/ctrlp.vim'; -- Search files, mru, etc
   'scrooloose/nerdcommenter'; -- Toggle comments
   'Shougo/vinarise.vim'; -- HEX editor
   'cohama/lexima.vim';
@@ -35,6 +34,8 @@ require 'paq' {
   'vimsence/vimsence'; -- Discord rich presence
   'terryma/vim-multiple-cursors';
   'tpope/vim-characterize';
+  'folke/persistence.nvim';
+  'nvim-telescope/telescope.nvim';
 
   -- Git
   'airblade/vim-gitgutter'; -- Show modified lines
@@ -47,7 +48,7 @@ require 'paq' {
   'ARM9/snes-syntax-vim';
 
   -- Appearance
-  {'dracula/vim', as='dracula'};
+  'dracula/vim';
   'TaDaa/vimade';
   'nvim-lualine/lualine.nvim';
   'kyazdani42/nvim-web-devicons';

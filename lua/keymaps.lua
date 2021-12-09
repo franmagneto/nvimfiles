@@ -20,8 +20,11 @@ set("n", "bp", ":bprevious<CR>", ns)
 set("n", "bn", ":bnext<CR>", ns)
 -- Open terminal on split
 set("n", "<leader>t", ":12split \\| terminal<CR>", ns)
--- Create session for current directory
-set("", "<leader>m", ":call MakeSession()<CR>", ns)
+-- Telescope
+set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", ns)
+set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", ns)
+set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", ns)
+set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", ns)
 -- Vimux
 -- Run npm scripts
 set("", "<Leader>vd", ":VimuxRunCommand('npm run dev')<CR>", ns)

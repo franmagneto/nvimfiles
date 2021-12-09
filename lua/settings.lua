@@ -51,16 +51,6 @@ g.vista_disable_statusline = 1
 g.vista_echo_cursor_strategy = 'floating_win'
 g.vista_close_on_jump = 1
 
--- CtrlP
--- opt.wildignore:append '*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store' -- MacOSX/Linux
-
--- Use ripgrep with CtrlP
-if fn.executable('rg') then
-  opt.grepprg = 'rg --vimgrep'
-  g.ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  g.ctrlp_use_caching = 0
-end
-
 -- gitgutter
 g.gitgutter_max_signs = 1000
 
