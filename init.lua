@@ -5,6 +5,7 @@ require 'plugins.treesitter'
 require 'plugins.tree'
 require 'plugins.lualine'
 require 'plugins.persistence'
+require 'plugins.telescope'
 
 require 'settings'
 require 'keymaps'
