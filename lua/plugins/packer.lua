@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-characterize'
   use 'folke/persistence.nvim'
   use 'nvim-telescope/telescope.nvim'
+  use {'nvim-telescope/telescope-fzf-native.nvim', run="make"}
 
   -- Git
   use 'airblade/vim-gitgutter' -- Show modified lines
