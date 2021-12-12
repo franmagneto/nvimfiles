@@ -104,10 +104,10 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/diffconflicts",
     url = "https://github.com/whiteinge/diffconflicts"
   },
-  indentLine = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/indentLine",
-    url = "https://github.com/Yggdroot/indentLine"
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lexima.vim"] = {
     loaded = true,
