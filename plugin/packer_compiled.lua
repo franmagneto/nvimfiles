@@ -199,10 +199,10 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  vim = {
+  ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-characterize"] = {
     loaded = true,

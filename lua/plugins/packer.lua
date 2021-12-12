@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   use 'ARM9/snes-syntax-vim'
 
   -- Appearance
-  use 'dracula/vim'
+  use 'folke/tokyonight.nvim'
   use 'TaDaa/vimade'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'

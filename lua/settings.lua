@@ -40,7 +40,8 @@ cmd [[autocmd TermOpen * setlocal nonumber norelativenumber | startinsert]]
 
 -- Theme
 opt.termguicolors = true
-cmd [[colorscheme dracula]]
+g.tokyonight_style = "night"
+cmd [[colorscheme tokyonight]]
 
 g.vimsence_small_text = 'NeoVim'
 g.vimsence_small_image = 'neovim'
