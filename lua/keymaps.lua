@@ -13,7 +13,7 @@ set('n', '<F2>', ':Vista!!<CR>', ns)
 -- Ctrl+A to select all
 set('', '<C-a>', '<esc>ggVG<CR>', ns)
 -- Ctrl+C/Ctrl+V to copy/paste
-set('v', '<C-c>', '\'+y', ns)
+set('v', '<C-c>', '"+y', ns)
 set('i', '<C-v>', '<esc>\'+pi', ns)
 -- Buffer Next and Previous
 set('n', 'bp', ':bprevious<CR>', ns)
