@@ -27,7 +27,12 @@ return require('packer').startup(function(use)
   use 'liuchengxu/vista.vim'
   use 'antoinemadec/FixCursorHold.nvim'
   use 'farmergreg/vim-lastplace' -- Restore cursor position
-  use 'scrooloose/nerdcommenter' -- Toggle comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require'Comment'.setup()
+    end
+  }
   use 'Shougo/vinarise.vim' -- HEX editor
   use 'cohama/lexima.vim'
   use 'gregsexton/MatchTag'
