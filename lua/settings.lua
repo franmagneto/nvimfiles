@@ -1,8 +1,7 @@
 local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
-local fn = vim.fn
-local bo = vim.bo
+
 -- Highlight the 80th column
 opt.colorcolumn = '80'
 
@@ -12,7 +11,6 @@ opt.softtabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 cmd [[autocmd filetype make setlocal noexpandtab]]
--- filetype plugin indent on
 
 -- Commands
 cmd [[command! W :execute ':silent w !sudo tee "%" > /dev/null' | :edit!]]
@@ -42,25 +40,3 @@ cmd [[autocmd TermOpen * setlocal nonumber norelativenumber | startinsert]]
 opt.termguicolors = true
 g.tokyonight_style = "night"
 cmd [[colorscheme tokyonight]]
-
-g.vimsence_small_text = 'NeoVim'
-g.vimsence_small_image = 'neovim'
-
--- Vista
-g.vista_default_executive = 'nvim_lsp'
-g.vista_disable_statusline = 1
-g.vista_echo_cursor_strategy = 'floating_win'
-g.vista_close_on_jump = 1
-
--- gitgutter
-g.gitgutter_max_signs = 1000
-
--- nerdcommenter
-g.NERDSpaceDelims = 1
-
--- Vimux
-g.VimuxOrientation = 'h'
-g.VimuxHeight = 30
-
--- Syntax
-cmd [[autocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass]]
