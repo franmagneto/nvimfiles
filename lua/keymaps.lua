@@ -14,12 +14,12 @@ set('n', '<F2>', ':Vista!!<CR>', ns)
 set('', '<C-a>', '<esc>ggVG<CR>', ns)
 -- Ctrl+C/Ctrl+V to copy/paste
 set('v', '<C-c>', '"+y', ns)
-set('i', '<C-v>', '<esc>\'+pi', ns)
+set('i', '<C-v>', '<esc>"+pi', ns)
 -- Buffer Next and Previous
 set('n', 'bp', ':bprevious<CR>', ns)
 set('n', 'bn', ':bnext<CR>', ns)
 -- Open terminal on split
-set('n', '<leader>t', ':12split \\| terminal<CR>', ns)
+set('n', '<leader>t', ':12split | terminal<CR>', ns)
 -- Telescope
 set('n', '<leader>ff', '<cmd>Telescope find_files<cr>', ns)
 set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', ns)
