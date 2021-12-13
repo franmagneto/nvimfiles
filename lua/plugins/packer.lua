@@ -31,7 +31,6 @@ return require('packer').startup(function(use)
   use 'Shougo/vinarise.vim' -- HEX editor
   use 'cohama/lexima.vim'
   use 'gregsexton/MatchTag'
-  use 'rbgrouleff/bclose.vim' -- Close buffer without close window
   use 'tpope/vim-eunuch' -- Vim sugar for the UNIX shell commands that need it the most.
   use 'benmills/vimux'
   use 'vimsence/vimsence' -- Discord rich presence

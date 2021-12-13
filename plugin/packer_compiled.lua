@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
-  ["bclose.vim"] = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/bclose.vim",
-    url = "https://github.com/rbgrouleff/bclose.vim"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
