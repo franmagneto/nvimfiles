@@ -5,6 +5,7 @@ require 'plugins.treesitter'
 require 'plugins.tree'
 require 'plugins.persistence'
 require 'plugins.telescope'
+require 'plugins.dap'
 
 require 'settings'
 require 'keymaps'
