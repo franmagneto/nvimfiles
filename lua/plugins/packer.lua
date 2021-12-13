@@ -6,7 +6,6 @@ end
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'nvim-lua/plenary.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -15,7 +14,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
-  use 'simrat39/rust-tools.nvim'
+  use {
+    'simrat39/rust-tools.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+  }
   use 'mfussenegger/nvim-dap'
 
   -- Utilities
@@ -33,7 +35,10 @@ return require('packer').startup(function(use)
   use 'terryma/vim-multiple-cursors'
   use 'tpope/vim-characterize'
   use 'folke/persistence.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+  }
   use {'nvim-telescope/telescope-fzf-native.nvim', run="make"}
 
   -- Git
@@ -49,11 +54,22 @@ return require('packer').startup(function(use)
   -- Appearance
   use 'folke/tokyonight.nvim'
   use 'TaDaa/vimade'
-  use 'nvim-lualine/lualine.nvim'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'},
+    config = function()
+      require'lualine'.setup()
+    end
+  }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {'kyazdani42/nvim-web-devicons'},
+  }
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'ryanoasis/vim-devicons'
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'},
+  }
 
   if packer_bootstrap then
     require('packer').sync()

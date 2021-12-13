@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/MatchTag",
     url = "https://github.com/gregsexton/MatchTag"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["bclose.vim"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/bclose.vim",
@@ -115,6 +120,7 @@ _G.packer_plugins = {
     url = "https://github.com/cohama/lexima.vim"
   },
   ["lualine.nvim"] = {
+    config = { "\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -209,11 +215,6 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-characterize",
     url = "https://github.com/tpope/vim-characterize"
   },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
-  },
   ["vim-eunuch"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-eunuch",
@@ -267,6 +268,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
+time([[Config for lualine.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
