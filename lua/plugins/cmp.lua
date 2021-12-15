@@ -1,15 +1,12 @@
--- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip = require'luasnip'
+local cmp = require'cmp'
 
--- nvim-cmp setup
-local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      require'luasnip'.lsp_expand(args.body)
     end,
   },
   mapping = {

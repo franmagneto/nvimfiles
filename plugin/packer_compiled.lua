@@ -172,6 +172,7 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["persistence.nvim"] = {
+    config = { "\27LJ\1\0029\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\16persistence\frequire\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/persistence.nvim",
     url = "https://github.com/folke/persistence.nvim"
@@ -282,6 +283,10 @@ time([[Config for Comment.nvim]], false)
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
+-- Config for: persistence.nvim
+time([[Config for persistence.nvim]], true)
+try_loadstring("\27LJ\1\0029\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\16persistence\frequire\0", "config", "persistence.nvim")
+time([[Config for persistence.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
