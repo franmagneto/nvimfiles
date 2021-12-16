@@ -22,6 +22,10 @@ return require'packer'.startup(function(use)
     end
   }
   use 'mfussenegger/nvim-dap'
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+  }
 
   -- Utilities
   use 'liuchengxu/vista.vim'
@@ -44,7 +48,7 @@ return require'packer'.startup(function(use)
   use {
     'folke/persistence.nvim',
     config = function()
-      require'persistence'.setup ()
+      require'persistence'.setup()
     end
   }
   use {

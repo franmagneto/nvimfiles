@@ -32,11 +32,22 @@ local on_attach = function(client, bufnr)
 
 end
 
+local null_ls = require'null-ls'
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.code_actions.eslint,
+    null_ls.builtins.formatting.prettier
+  },
+  on_attach = on_attach
+})
+
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require'cmp_nvim_lsp'.update_capabilities(capabilities)
 
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require'nvim-lsp-installer'
 
 local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls' }
 
@@ -45,27 +56,27 @@ for _, name in pairs(servers) do
 	-- Check that the server is supported in nvim-lsp-installer
 	if ok then
 		if not server:is_installed() then
-			print("Installing " .. name)
+			print('Installing ' .. name)
 			server:install()
 		end
 	end
 end
 
 lsp_installer.on_server_ready(function(server)
-    local opts = {
-      on_attach = on_attach,
-      capabilities = capabilities,
-      flags = {
-        debounce_text_changes = 150,
-      }
+  local opts = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = {
+      debounce_text_changes = 150,
     }
+  }
 
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --   opts.root_dir = function() return vim.loop.cwd() end
-    -- end
+  -- (optional) Customize the options passed to the server
+  -- if server.name == "tsserver" then
+  --   opts.root_dir = function() return vim.loop.cwd() end
+  -- end
 
-    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-    server:setup(opts)
-    vim.cmd [[ do User LspAttachBuffers ]]
+  -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+  server:setup(opts)
+  vim.cmd [[ do User LspAttachBuffers ]]
 end)
