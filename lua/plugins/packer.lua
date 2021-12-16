@@ -38,8 +38,20 @@ return require'packer'.startup(function(use)
   use 'cohama/lexima.vim'
   use 'gregsexton/MatchTag'
   use 'tpope/vim-eunuch' -- Vim sugar for the UNIX shell commands that need it the most.
-  use 'benmills/vimux'
-  use 'vimsence/vimsence' -- Discord rich presence
+  use {
+    'benmills/vimux',
+    config = function()
+      vim.g.VimuxOrientation = 'h'
+      vim.g.VimuxHeight = 30
+    end
+  }
+  use {
+    'vimsence/vimsence', -- Discord rich presence
+    config = function()
+      vim.g.vimsence_small_text = 'NeoVim'
+      vim.g.vimsence_small_image = 'neovim'
+    end
+  }
   use 'terryma/vim-multiple-cursors'
   use 'tpope/vim-characterize'
   use {
@@ -60,7 +72,12 @@ return require'packer'.startup(function(use)
   -- Syntax
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'windwp/nvim-ts-autotag'
-  use 'ARM9/snes-syntax-vim'
+  use {
+    'ARM9/snes-syntax-vim',
+    config = function()
+      vim.cmd [[autocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass]]
+    end
+  }
 
   -- Appearance
   use 'folke/tokyonight.nvim'
