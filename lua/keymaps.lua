@@ -27,11 +27,11 @@ set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', ns)
 set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', ns)
 -- Sessions
 -- restore the session for the current directory
-set('n', '<leader>qs', [[<cmd>lua require('persistence').load()<cr>]], ns)
+set('n', '<leader>qs', [[<cmd>lua require'persistence'.start()<cr>]], ns)
 -- restore the last session
-set('n', '<leader>ql', [[<cmd>lua require('persistence').load({ last = true })<cr>]], ns)
+set('n', '<leader>ql', [[<cmd>lua require'persistence'.load({ last = true })<cr>]], ns)
 -- stop Persistence => session won't be saved on exit
-set('n', '<leader>qd', [[<cmd>lua require('persistence').stop()<cr>]], ns)
+set('n', '<leader>qd', [[<cmd>lua require'persistence'.stop()<cr>]], ns)
 -- Vimux
 -- Run npm scripts
 set('', '<Leader>vd', ':VimuxRunCommand("npm run dev")<CR>', ns)

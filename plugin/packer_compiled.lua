@@ -177,7 +177,6 @@ _G.packer_plugins = {
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["persistence.nvim"] = {
-    config = { "\27LJ\1\0029\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\16persistence\frequire\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/persistence.nvim",
     url = "https://github.com/folke/persistence.nvim"
@@ -292,10 +291,6 @@ time([[Config for vimux]], false)
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: snes-syntax-vim
-time([[Config for snes-syntax-vim]], true)
-try_loadstring("\27LJ\1\2i\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0Jautocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass\bcmd\bvim\0", "config", "snes-syntax-vim")
-time([[Config for snes-syntax-vim]], false)
 -- Config for: rust-tools.nvim
 time([[Config for rust-tools.nvim]], true)
 try_loadstring("\27LJ\1\0028\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\15rust-tools\frequire\0", "config", "rust-tools.nvim")
@@ -304,10 +299,10 @@ time([[Config for rust-tools.nvim]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: persistence.nvim
-time([[Config for persistence.nvim]], true)
-try_loadstring("\27LJ\1\0029\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\16persistence\frequire\0", "config", "persistence.nvim")
-time([[Config for persistence.nvim]], false)
+-- Config for: snes-syntax-vim
+time([[Config for snes-syntax-vim]], true)
+try_loadstring("\27LJ\1\2i\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0Jautocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass\bcmd\bvim\0", "config", "snes-syntax-vim")
+time([[Config for snes-syntax-vim]], false)
 -- Config for: vimade
 time([[Config for vimade]], true)
 try_loadstring("\27LJ\1\2>\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\0\1\21enabletreesitter\3\1\vvimade\6g\bvim\0", "config", "vimade")

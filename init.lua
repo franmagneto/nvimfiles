@@ -6,6 +6,7 @@ require 'plugins.tree'
 require 'plugins.telescope'
 require 'plugins.dap'
 require 'plugins.vista'
+require 'plugins.persistence'
 
 require 'settings'
 require 'keymaps'
