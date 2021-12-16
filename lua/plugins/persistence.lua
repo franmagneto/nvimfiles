@@ -2,8 +2,8 @@ local persistence = require'persistence'
 
 persistence.setup()
 
-if (persistence.get_last() == nil) then
-  persistence.stop()
-else
+if vim.fn.filereadable(persistence.get_current()) ~= 0 then
   vim.cmd [[autocmd VimEnter * nested lua require'persistence'.load()]]
+else
+  persistence.stop()
 end
