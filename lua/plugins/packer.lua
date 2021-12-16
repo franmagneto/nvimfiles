@@ -6,6 +6,7 @@ end
 
 return require'packer'.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -16,16 +17,12 @@ return require'packer'.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use {
     'simrat39/rust-tools.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
     config = function()
       require'rust-tools'.setup()
     end
   }
   use 'mfussenegger/nvim-dap'
-  use {
-    'jose-elias-alvarez/null-ls.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-  }
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Utilities
   use 'liuchengxu/vista.vim'
@@ -51,10 +48,7 @@ return require'packer'.startup(function(use)
       require'persistence'.setup()
     end
   }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-  }
+  use 'nvim-telescope/telescope.nvim'
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'nvim-telescope/telescope-ui-select.nvim'
 
@@ -71,22 +65,16 @@ return require'packer'.startup(function(use)
   -- Appearance
   use 'folke/tokyonight.nvim'
   use 'TaDaa/vimade'
+  use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
     config = function()
       require'lualine'.setup()
     end
   }
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
+  use 'kyazdani42/nvim-tree.lua'
   use 'lukas-reineke/indent-blankline.nvim'
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-  }
+  use 'romgrk/barbar.nvim'
 
   if packer_bootstrap then
     require'packer'.sync()
