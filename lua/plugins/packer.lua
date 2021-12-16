@@ -81,7 +81,12 @@ return require'packer'.startup(function(use)
 
   -- Appearance
   use 'folke/tokyonight.nvim'
-  use 'TaDaa/vimade'
+  use {
+    'TaDaa/vimade',
+    config = function()
+      vim.g.vimade = { enabletreesitter = 1 }
+    end
+  }
   use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
