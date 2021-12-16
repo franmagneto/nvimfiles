@@ -1,4 +1,4 @@
-g = vim.g
+local g = vim.g
 
 g.vista_default_executive = 'nvim_lsp'
 g.vista_disable_statusline = 1
