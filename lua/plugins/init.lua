@@ -20,7 +20,6 @@ cmd [[colorscheme tokyonight]]
 
 -- Simple setups
 require'Comment'.setup()
-require'lualine'.setup()
 require'rust-tools'.setup()
 cmd [[autocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass]]
 g.vimade = { enabletreesitter = 1 }
@@ -38,3 +37,10 @@ g.vista_default_executive = 'nvim_lsp'
 g.vista_disable_statusline = 1
 g.vista_echo_cursor_strategy = 'floating_win'
 g.vista_close_on_jump = 1
+
+-- Lualine
+require'lualine'.setup {
+  sections = {
+    lualine_c = {{ 'filename', path = 1 }},
+  },
+}
