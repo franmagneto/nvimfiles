@@ -40,7 +40,7 @@ capabilities = require'cmp_nvim_lsp'.update_capabilities(capabilities)
 
 local lsp_installer = require'nvim-lsp-installer'
 
-local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls' }
+local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls', 'ltex' }
 
 for _, name in pairs(servers) do
 	local ok, server = lsp_installer.get_server(name)

@@ -1,4 +1,3 @@
-local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
 
@@ -31,7 +30,6 @@ opt.backupcopy = 'yes'
 opt.updatetime = 300
 opt.shortmess:append {c = true}
 opt.signcolumn = 'yes'
-g.tex_flavor = "latex"
 
 -- Terminal settings (no line numbers; start in Terminal-mode)
 cmd [[autocmd TermOpen * setlocal nonumber norelativenumber | startinsert]]
