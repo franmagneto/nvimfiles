@@ -13,6 +13,8 @@ local cmd = vim.cmd
 -- Plugins configurations
 
 -- Colorscheme
+opt.termguicolors = true
+g.tokyonight_style = "night"
 cmd [[colorscheme tokyonight]]
 
 -- Simple setups
