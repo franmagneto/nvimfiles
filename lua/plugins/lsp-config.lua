@@ -53,15 +53,16 @@ for _, name in pairs(servers) do
 	end
 end
 
+local flags = {
+  debounce_text_changes = 150,
+}
+
 lsp_installer.on_server_ready(function(server)
   local opts = {
     on_attach = on_attach,
     capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    }
+    flags = flags,
   }
-
   -- (optional) Customize the options passed to the server
   -- if server.name == "tsserver" then
   --   opts.root_dir = function() return vim.loop.cwd() end
@@ -73,12 +74,18 @@ lsp_installer.on_server_ready(function(server)
 end)
 
 -- Standalone servers
-null_ls.setup({
+null_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = flags,
   sources = {
     null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.code_actions.eslint_d,
-    null_ls.builtins.formatting.prettier
+    null_ls.builtins.formatting.prettier,
   },
-  on_attach = on_attach
-})
-require'lspconfig'.clangd.setup{}
+}
+require'lspconfig'.clangd.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = flags,
+}
