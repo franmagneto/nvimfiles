@@ -34,22 +34,13 @@ end
 
 local null_ls = require'null-ls'
 
-null_ls.setup({
-  sources = {
-    null_ls.builtins.diagnostics.eslint_d,
-    null_ls.builtins.code_actions.eslint_d,
-    null_ls.builtins.formatting.prettier
-  },
-  on_attach = on_attach
-})
-
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require'cmp_nvim_lsp'.update_capabilities(capabilities)
 
 local lsp_installer = require'nvim-lsp-installer'
 
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls' }
+local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls' }
 
 for _, name in pairs(servers) do
 	local ok, server = lsp_installer.get_server(name)
@@ -80,3 +71,14 @@ lsp_installer.on_server_ready(function(server)
   server:setup(opts)
   vim.cmd [[ do User LspAttachBuffers ]]
 end)
+
+-- Standalone servers
+null_ls.setup({
+  sources = {
+    null_ls.builtins.diagnostics.eslint_d,
+    null_ls.builtins.code_actions.eslint_d,
+    null_ls.builtins.formatting.prettier
+  },
+  on_attach = on_attach
+})
+require'lspconfig'.clangd.setup{}
