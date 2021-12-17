@@ -70,7 +70,6 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
-    config = { "\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fComment\frequire\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
@@ -121,7 +120,6 @@ _G.packer_plugins = {
     url = "https://github.com/cohama/lexima.vim"
   },
   ["lualine.nvim"] = {
-    config = { "\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
@@ -197,13 +195,11 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rust-tools.nvim"] = {
-    config = { "\27LJ\1\0028\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\15rust-tools\frequire\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["snes-syntax-vim"] = {
-    config = { "\27LJ\1\2i\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0Jautocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass\bcmd\bvim\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/snes-syntax-vim",
     url = "https://github.com/ARM9/snes-syntax-vim"
@@ -269,19 +265,16 @@ _G.packer_plugins = {
     url = "https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
   },
   vimade = {
-    config = { "\27LJ\1\2>\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\0\1\21enabletreesitter\3\1\vvimade\6g\bvim\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vimade",
     url = "https://github.com/TaDaa/vimade"
   },
   vimsence = {
-    config = { "\27LJ\1\2h\0\0\2\0\6\0\t4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0%\1\5\0:\1\4\0G\0\1\0\vneovim\25vimsence_small_image\vNeoVim\24vimsence_small_text\6g\bvim\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vimsence",
     url = "https://github.com/vimsence/vimsence"
   },
   vimux = {
-    config = { "\27LJ\1\2P\0\0\2\0\5\0\t4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\30\0:\1\4\0G\0\1\0\16VimuxHeight\6h\21VimuxOrientation\6g\bvim\0" },
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vimux",
     url = "https://github.com/benmills/vimux"
@@ -299,34 +292,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: vimsence
-time([[Config for vimsence]], true)
-try_loadstring("\27LJ\1\2h\0\0\2\0\6\0\t4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0%\1\5\0:\1\4\0G\0\1\0\vneovim\25vimsence_small_image\vNeoVim\24vimsence_small_text\6g\bvim\0", "config", "vimsence")
-time([[Config for vimsence]], false)
--- Config for: vimux
-time([[Config for vimux]], true)
-try_loadstring("\27LJ\1\2P\0\0\2\0\5\0\t4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\30\0:\1\4\0G\0\1\0\16VimuxHeight\6h\21VimuxOrientation\6g\bvim\0", "config", "vimux")
-time([[Config for vimux]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-time([[Config for lualine.nvim]], false)
--- Config for: rust-tools.nvim
-time([[Config for rust-tools.nvim]], true)
-try_loadstring("\27LJ\1\0028\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\15rust-tools\frequire\0", "config", "rust-tools.nvim")
-time([[Config for rust-tools.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: snes-syntax-vim
-time([[Config for snes-syntax-vim]], true)
-try_loadstring("\27LJ\1\2i\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0Jautocmd BufNewFile,BufRead *.{ASM,INC,asm,inc} set filetype=snes_bass\bcmd\bvim\0", "config", "snes-syntax-vim")
-time([[Config for snes-syntax-vim]], false)
--- Config for: vimade
-time([[Config for vimade]], true)
-try_loadstring("\27LJ\1\2>\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\0\1\21enabletreesitter\3\1\vvimade\6g\bvim\0", "config", "vimade")
-time([[Config for vimade]], false)
 if should_profile then save_profiles() end
 
 end)
