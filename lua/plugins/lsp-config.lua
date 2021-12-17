@@ -63,12 +63,18 @@ lsp_installer.on_server_ready(function(server)
     capabilities = capabilities,
     flags = flags,
   }
-  -- (optional) Customize the options passed to the server
-  -- if server.name == "tsserver" then
-  --   opts.root_dir = function() return vim.loop.cwd() end
-  -- end
 
-  -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+  if server.name == 'sumneko_lua' then
+    opts.settings = {
+      Lua = {
+        runtime = { version = 'LuaJIT' },
+        diagnostics = { globals = { 'vim' } },
+        workspace = { library = vim.api.nvim_get_runtime_file('', true) },
+        telemetry = { enable = false },
+      }
+    }
+  end
+
   server:setup(opts)
   vim.cmd [[ do User LspAttachBuffers ]]
 end)
