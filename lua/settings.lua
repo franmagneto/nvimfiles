@@ -39,4 +39,3 @@ cmd [[autocmd TermOpen * setlocal nonumber norelativenumber | startinsert]]
 -- Theme
 opt.termguicolors = true
 g.tokyonight_style = "night"
-cmd [[colorscheme tokyonight]]
