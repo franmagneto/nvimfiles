@@ -2,7 +2,7 @@ local set = vim.api.nvim_set_keymap
 local ns = { noremap = true, silent = true }
 
 -- Close buffer but keep window
-set('n', '<Leader>bd', ':bd<CR>', ns)
+set('n', '<Leader>bd', ':BW<CR>', ns)
 -- Jump between quickfixes
 set('', 'cn', ':cn<CR>', ns)
 set('', 'cp', ':cp<CR>', ns)

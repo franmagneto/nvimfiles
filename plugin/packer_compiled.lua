@@ -224,6 +224,11 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-bufkill"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-bufkill",
+    url = "https://github.com/qpkorr/vim-bufkill"
+  },
   ["vim-characterize"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-characterize",
