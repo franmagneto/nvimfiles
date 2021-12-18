@@ -6,6 +6,7 @@ require'plugins.persistence'
 require'plugins.nerdtree'
 require'plugins.telescope'
 require'plugins.dap'
+require'plugins.indent-blankline'
 
 local g = vim.g
 local opt = vim.opt
