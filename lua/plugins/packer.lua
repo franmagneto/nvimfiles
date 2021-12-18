@@ -48,6 +48,7 @@ return require'packer'.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'windwp/nvim-ts-autotag' }
   use { 'ARM9/snes-syntax-vim' }
+  use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }
 
   -- Appearance
   use { 'folke/tokyonight.nvim' }

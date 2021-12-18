@@ -254,6 +254,11 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-hexokinase"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
+    url = "https://github.com/RRethy/vim-hexokinase"
+  },
   ["vim-lastplace"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-lastplace",
