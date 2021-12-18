@@ -29,10 +29,6 @@ g.vimade = { enabletreesitter = 1 }
 g.vimsence_small_text = 'NeoVim'
 g.vimsence_small_image = 'neovim'
 
--- Vimux
-g.VimuxOrientation = 'h'
-g.VimuxHeight = 30
-
 -- Vista
 g.vista_default_executive = 'nvim_lsp'
 g.vista_disable_statusline = 1
