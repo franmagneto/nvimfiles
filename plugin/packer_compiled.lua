@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -203,6 +208,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/snes-syntax-vim",
     url = "https://github.com/ARM9/snes-syntax-vim"
+  },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

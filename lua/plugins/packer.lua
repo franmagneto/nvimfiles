@@ -18,6 +18,7 @@ return require'packer'.startup(function(use)
   use { 'L3MON4D3/LuaSnip' }
   use { 'simrat39/rust-tools.nvim' }
   use { 'mfussenegger/nvim-dap' }
+  use { 'theHamsta/nvim-dap-virtual-text' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
 
   -- Utilities
@@ -34,10 +35,13 @@ return require'packer'.startup(function(use)
   use { 'terryma/vim-multiple-cursors' }
   use { 'tpope/vim-characterize' }
   use { 'folke/persistence.nvim' }
+  use { 'qpkorr/vim-bufkill' }
+
+  -- Telescope
   use { 'nvim-telescope/telescope.nvim' }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use { 'nvim-telescope/telescope-ui-select.nvim' }
-  use { 'qpkorr/vim-bufkill' }
+  use { 'nvim-telescope/telescope-dap.nvim' }
 
   -- Git
   use { 'airblade/vim-gitgutter' } -- Show modified lines
