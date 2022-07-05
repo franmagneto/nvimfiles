@@ -20,6 +20,7 @@ return require'packer'.startup(function(use)
   use { 'mfussenegger/nvim-dap' }
   use { 'theHamsta/nvim-dap-virtual-text' }
   use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'akinsho/flutter-tools.nvim' }
 
   -- Utilities
   use { 'liuchengxu/vista.vim' }

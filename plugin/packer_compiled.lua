@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/diffconflicts",
     url = "https://github.com/whiteinge/diffconflicts"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
