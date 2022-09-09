@@ -17,8 +17,7 @@ local cmd = vim.cmd
 
 -- Colorscheme
 opt.termguicolors = true
-g.tokyonight_style = "night"
-cmd [[colorscheme tokyonight]]
+cmd [[colorscheme tokyonight-night]]
 
 -- Simple setups
 require'Comment'.setup()
