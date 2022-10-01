@@ -32,39 +32,30 @@ local on_attach = function(_, bufnr)
 
 end
 
-local null_ls = require'null-ls'
-
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require'cmp_nvim_lsp'.update_capabilities(capabilities)
 
-local lsp_installer = require'nvim-lsp-installer'
-
 local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls', 'ltex' }
 
-for _, name in pairs(servers) do
-	local ok, server = lsp_installer.get_server(name)
-	-- Check that the server is supported in nvim-lsp-installer
-	if ok then
-		if not server:is_installed() then
-			print('Installing ' .. name)
-			server:install()
-		end
-	end
-end
+require'mason'.setup()
+require'mason-lspconfig'.setup {
+  ensure_installed = servers,
+  automatic_installation = true,
+}
 
 local flags = {
   debounce_text_changes = 150,
 }
 
-lsp_installer.on_server_ready(function(server)
+local lspconfig = require'lspconfig'
+for _, name in pairs(servers) do
   local opts = {
     on_attach = on_attach,
     capabilities = capabilities,
     flags = flags,
   }
-
-  if server.name == 'sumneko_lua' then
+  if name == 'sumneko_lua' then
     opts.settings = {
       Lua = {
         runtime = { version = 'LuaJIT' },
@@ -74,12 +65,13 @@ lsp_installer.on_server_ready(function(server)
       }
     }
   end
-
-  server:setup(opts)
+  lspconfig[name].setup(opts)
   vim.cmd [[ do User LspAttachBuffers ]]
 end)
 
 -- Standalone servers
+
+local null_ls = require'null-ls'
 null_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -90,7 +82,8 @@ null_ls.setup {
     null_ls.builtins.formatting.prettier,
   },
 }
-require'lspconfig'.clangd.setup {
+
+lspconfig.clangd.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   flags = flags,

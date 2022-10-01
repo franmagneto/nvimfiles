@@ -37,4 +37,4 @@ dap.configurations.cpp = {
 dap.configurations.c = dap.configurations.cpp
 dap.configurations.rust = dap.configurations.cpp
 
-require'nvim-dap-virtual-text'.setup()
+require'nvim-dap-virtual-text'.setup {}
