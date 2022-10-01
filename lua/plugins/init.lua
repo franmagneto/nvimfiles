@@ -1,11 +1,11 @@
 require'plugins.packer'
+require'plugins.dap'
 require'plugins.lsp-config'
 require'plugins.cmp'
 require'plugins.treesitter'
 require'plugins.persistence'
-require'plugins.nerdtree'
+require'plugins.nvim-tree'
 require'plugins.telescope'
-require'plugins.dap'
 require'plugins.indent-blankline'
 require'plugins.flutter-tools'
 

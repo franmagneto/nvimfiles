@@ -66,11 +66,8 @@ return require'packer'.startup(function(use)
   use { 'TaDaa/vimade' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'nvim-lualine/lualine.nvim' }
-  use { 'preservim/nerdtree' }
-  use { 'Xuyuanp/nerdtree-git-plugin' }
-  use { 'ryanoasis/vim-devicons' }
-  use { 'tiagofumo/vim-nerdtree-syntax-highlight' }
-  use { 'PhilRunninger/nerdtree-visual-selection' }
+  use { 'kyazdani42/nvim-tree.lua' }
+  use { 'kyazdani42/nvim-web-devicons' }
   use { 'lukas-reineke/indent-blankline.nvim' }
   use { 'romgrk/barbar.nvim' }
 

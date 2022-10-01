@@ -7,7 +7,7 @@ set('n', '<Leader>bd', ':BW<CR>', ns)
 set('', 'cn', ':cn<CR>', ns)
 set('', 'cp', ':cp<CR>', ns)
 -- Toggle NvimTree
-set('n', '<F5>', ':NERDTreeToggle<CR>', ns)
+set('n', '<F5>', ':NvimTreeToggle<CR>', ns)
 -- Vista
 set('n', '<F2>', ':Vista!!<CR>', ns)
 -- Ctrl+A to select all

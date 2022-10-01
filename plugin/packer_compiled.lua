@@ -134,21 +134,6 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
-  ["nerdtree-git-plugin"] = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
-    url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
-  },
-  ["nerdtree-visual-selection"] = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nerdtree-visual-selection",
-    url = "https://github.com/PhilRunninger/nerdtree-visual-selection"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -178,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -254,11 +244,6 @@ _G.packer_plugins = {
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-characterize",
     url = "https://github.com/tpope/vim-characterize"
   },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
-  },
   ["vim-eunuch"] = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-eunuch",
@@ -288,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors",
     url = "https://github.com/terryma/vim-multiple-cursors"
-  },
-  ["vim-nerdtree-syntax-highlight"] = {
-    loaded = true,
-    path = "/home/fneto/.local/share/nvim/site/pack/packer/start/vim-nerdtree-syntax-highlight",
-    url = "https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
   },
   vimade = {
     loaded = true,

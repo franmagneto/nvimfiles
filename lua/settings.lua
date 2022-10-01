@@ -1,6 +1,9 @@
 local opt = vim.opt
 local cmd = vim.cmd
 
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Highlight the 80th column
 opt.colorcolumn = '80'
 
