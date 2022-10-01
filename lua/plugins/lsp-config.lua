@@ -67,7 +67,7 @@ for _, name in pairs(servers) do
   end
   lspconfig[name].setup(opts)
   vim.cmd [[ do User LspAttachBuffers ]]
-end)
+end
 
 -- Standalone servers
 
