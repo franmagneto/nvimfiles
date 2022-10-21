@@ -15,7 +15,6 @@ require'nvim-tree'.setup {
     dotfiles = true,
   },
   open_on_setup_file = true,
-  focus_empty_on_setup = true,
   diagnostics = {
     enable = true,
     show_on_dirs = true,
