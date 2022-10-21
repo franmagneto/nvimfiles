@@ -2,13 +2,14 @@
 -- after the language server attaches to the current buffer
 local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
   -- Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { noremap=true, silent=true }
+  local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -34,12 +35,12 @@ end
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require'cmp_nvim_lsp'.default_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'jdtls', 'sumneko_lua', 'vimls', 'ltex' }
 
-require'mason'.setup()
-require'mason-lspconfig'.setup {
+require('mason').setup()
+require('mason-lspconfig').setup {
   ensure_installed = servers,
   automatic_installation = true,
 }
@@ -48,7 +49,7 @@ local flags = {
   debounce_text_changes = 150,
 }
 
-local lspconfig = require'lspconfig'
+local lspconfig = require('lspconfig')
 for _, name in pairs(servers) do
   local opts = {
     on_attach = on_attach,
@@ -71,7 +72,7 @@ end
 
 -- Standalone servers
 
-local null_ls = require'null-ls'
+local null_ls = require('null-ls')
 null_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,

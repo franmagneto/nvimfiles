@@ -31,7 +31,7 @@ opt.splitbelow = true
 opt.mouse = 'a'
 opt.backupcopy = 'yes'
 opt.updatetime = 300
-opt.shortmess:append {c = true}
+opt.shortmess:append { c = true }
 opt.signcolumn = 'yes'
 
 -- Terminal settings (no line numbers; start in Terminal-mode)

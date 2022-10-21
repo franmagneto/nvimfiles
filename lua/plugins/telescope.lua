@@ -1,4 +1,4 @@
-local telescope = require'telescope'
+local telescope = require('telescope')
 
 telescope.setup {
   extensions = {
@@ -9,7 +9,7 @@ telescope.setup {
       case_mode = 'smart_case',
     },
     ['ui-select'] = {
-      require'telescope.themes'.get_dropdown()
+      require('telescope.themes').get_dropdown()
     },
   }
 }
